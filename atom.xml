@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="https://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-11-17T10:18:06.252Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git note</title>
+    <link href="http://yoursite.com/2019/11/17/git-note/"/>
+    <id>http://yoursite.com/2019/11/17/git-note/</id>
+    <published>2019-11-17T10:11:23.000Z</published>
+    <updated>2019-11-17T10:18:06.252Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="本地多个-remote-配置（同步推送到线上服务器）"><a href="#本地多个-remote-配置（同步推送到线上服务器）" class="headerlink" title="本地多个 remote 配置（同步推送到线上服务器）"></a>本地多个 remote 配置（同步推送到线上服务器）</h4><ol><li>远程 git库初始化，并配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git config receive.denyCurrentBranch updateInstead</span><br></pre></td></tr></table></figure></li><li>本地添加远程地址<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add productionServer ssh://ubuntu@xxx.xxx.xxx.xxx/usr/share/nginx/git_dir</span><br></pre></td></tr></table></figure></li></ol><h4 id="Git-Config中receive-denyCurrentBranch做了什么"><a href="#Git-Config中receive-denyCurrentBranch做了什么" class="headerlink" title="Git Config中receive.denyCurrentBranch做了什么?"></a>Git Config中receive.denyCurrentBranch做了什么?</h4><p>这个config是决定 当你Push到一个非bare的远程库的正处于切换状态下分支时的行为。</p><p>设置为true或refuse时，会拒绝你的push并且发出几行警告消息<br>设置为warn时，会接受你的push并且发出几行警告消息<br>设置为false或ignore时会接受你的push且不发出警告</p><p>后两种虽然接受了push,但并没有直接反映在工作目录(working tree)上，你需要输入git reset –hard, 或者切换到其他分支再切换回来，才能刷新文件</p><p>设置为updateInstead时，会接受push并直接更新工作目录,但如果工作目录相对HEAD指针有更新，则会拒绝push</p><h4 id="git-checkout"><a href="#git-checkout" class="headerlink" title="git checkout"></a>git checkout</h4><p><code>git checkout -- file</code>，没有–，就变成了“切换到另一个分支”的命令<br>命令git checkout – readme.txt意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：<br>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；<br>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。<br>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout – file。<br>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作</p><blockquote><p>总之，就是让这个文件回到最近一次git commit或git add时的状态</p></blockquote><p><code>git checkout --orphan &lt;new_branch&gt;</code><br>假如你的某个分支上，积累了无数次的提交，你也懒得去打理，打印出的log也让你无力吐槽，那么这个命令将是你的神器，它会基于当前所在分支新建一个赤裸裸的分支，没有任何的提交历史，但是当前分支的内容一一俱全。新建的分支，严格意义上说，还不是一个分支，因为HEAD指向的引用中没有commit值，只有在进行一次提交后，它才算得上真正的分支。</p><p><code>git checkout &lt;name&gt; 切换分支：</code></p><h3 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h3><p>写法：git reset [–hard|soft|mixed|merge|keep] [<commit>或HEAD]<br>功能：命令既可以回退版本，也可以把暂存区的修改回退到工作区<br>原理：将当前的分支重设（reset）到指定的<commit>或者HEAD（默认，如果不显示指定commit，默认是HEAD，即<br>最新的一次提交）<br>–hard：重设（reset） index和working directory，自从<commit>以来在working directory中的任何改变都﻿被丢弃，并把HEAD指向<commit>。<br>–soft：index和working directory中的内容不作任何改变，仅仅把HEAD指向<commit>。这个模式的效果是，执行完毕后，自从<commit>以来的所有改变都会显示在git status的”Changes to be committed”中。<br>–mixed:仅reset index，但是不reset working directory。</p><p>###git  checkout 与git reset区别<br>git checkout是把<code>工作区文件</code>回到最近一次git commit<code>或</code>git add时的状态<br>git reset 是使用<code>仓库区更新工作区和暂存区</code></p><h3 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h3><p>??? 储存在当前分支还是针对所有分支都可见<br>切换分支时必须commit your changes or stash them before you switch branches.<br>保存当前工作进度，会把暂存区和工作区的改动保存起来。执行完这个命令后，在运行git status命令，就会发现当前是一个干净的工作区，没有任何改动。使用git stash save ‘message…’可以添加一些注释</p><p>git stash list<br>显示保存进度的列表。也就意味着，git stash命令可以多次执行。</p><p><code>git stash pop</code> [–index] [stash_id]<br>git stash pop 恢复最新的进度到工作区。git默认会把工作区和暂存区的改动都恢复到工作区。<br><code>git stash pop --index</code> 恢复最新的进度到工作区和暂存区。（尝试将原来暂存区的改动还恢复到暂存区）<br>git stash pop stash@{1}恢复指定的进度到工作区。stash_id是通过git stash list命令得到的<br>通过git stash pop命令恢复进度后，会删除当前进度。<br>git stash apply [–index] [stash_id]<br>除了不删除恢复的进度之外，其余和git stash pop 命令一样。</p><p>git stash drop [stash_id]<br>删除一个存储的进度。如果不指定stash_id，则默认删除最新的存储进度。</p><p>git stash clear<br>删除所有存储的进度。</p><h4 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h4><p>git rebase master 待实践</p><h4 id="git-cherry-pick"><a href="#git-cherry-pick" class="headerlink" title="git cherry-pick"></a>git cherry-pick</h4><p>简单用法：<br>git cherry-pick <commit id><br>注意：当执行完 cherry-pick 以后，将会生成一个新的提交；这个新的提交的哈希值和原来的不同，但标识名一样；</p><h4 id="git-log-and-git-reflog"><a href="#git-log-and-git-reflog" class="headerlink" title="git log and git reflog"></a>git log and git reflog</h4><p><a href="http://wjp2013.github.io/tool/git-reflog-git-log-git-cherry-pick/" target="_blank" rel="noopener">http://wjp2013.github.io/tool/git-reflog-git-log-git-cherry-pick/</a></p><h4 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h4><p>删除远端分支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin -d login-test</span><br></pre></td></tr></table></figure><p>先查看远程分支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -ｒ</span><br></pre></td></tr></table></figure><p>查看所有分支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure><h4 id="git-pull与-rebase"><a href="#git-pull与-rebase" class="headerlink" title="git pull与 rebase"></a>git pull与 rebase</h4><p>今天<br>git pull origin master:master –rebase<br>发生了错误<br>! [rejected] (non-fast-forward)</p><p>一般non-fast-forward 这个错误是发生在push的时候和远程节点不对应，但是今天Git pull 也发生了问题，但是奇怪的是<br>git pull origin master –rebase<br>却可以正常运行。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;本地多个-remote-配置（同步推送到线上服务器）&quot;&gt;&lt;a href=&quot;#本地多个-remote-配置（同步推送到线上服务器）&quot; class=&quot;headerlink&quot; title=&quot;本地多个 remote 配置（同步推送到线上服务器）&quot;&gt;&lt;/a&gt;本地多个 rem
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/11/17/hello-world/"/>
+    <id>http://yoursite.com/2019/11/17/hello-world/</id>
+    <published>2019-11-17T09:33:09.256Z</published>
+    <updated>2019-11-17T09:33:09.256Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
