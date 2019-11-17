@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/11/17/regular-expression-note/</loc>
+    
+    <lastmod>2019-11-17T15:30:44.364Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/11/17/git-note/</loc>
     
     <lastmod>2019-11-17T10:18:06.252Z</lastmod>
