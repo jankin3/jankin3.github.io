@@ -79,11 +79,14 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta name="description" content="本地多个 remote 配置（同步推送到线上服务器） 远程 git库初始化，并配置12git initgit config receive.denyCurrentBranch updateInstead 本地添加远程地址1git remote add productionServer ssh:&#x2F;&#x2F;ubuntu@xxx.xxx.xxx.xxx&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;git_dir    G">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git note">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;17&#x2F;git-note&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本地多个 remote 配置（同步推送到线上服务器） 远程 git库初始化，并配置12git initgit config receive.denyCurrentBranch updateInstead 本地添加远程地址1git remote add productionServer ssh:&#x2F;&#x2F;ubuntu@xxx.xxx.xxx.xxx&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;git_dir    G">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-17T10:13:33.582Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -114,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/17/git-note/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>git note | Hexo</title>
   
 
 
@@ -139,8 +142,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,9 +215,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -245,9 +247,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/17/git-note/" itemprop="url">git note</a></h1>
+          <h1 class="post-title" itemprop="name headline">git note</h1>
         
 
         <div class="post-meta">
@@ -297,9 +297,7 @@
       
 
       
-        
-          
-            <h4 id="本地多个-remote-配置（同步推送到线上服务器）"><a href="#本地多个-remote-配置（同步推送到线上服务器）" class="headerlink" title="本地多个 remote 配置（同步推送到线上服务器）"></a>本地多个 remote 配置（同步推送到线上服务器）</h4><ol>
+        <h4 id="本地多个-remote-配置（同步推送到线上服务器）"><a href="#本地多个-remote-配置（同步推送到线上服务器）" class="headerlink" title="本地多个 remote 配置（同步推送到线上服务器）"></a>本地多个 remote 配置（同步推送到线上服务器）</h4><ol>
 <li>远程 git库初始化，并配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git config receive.denyCurrentBranch updateInstead</span><br></pre></td></tr></table></figure></li>
 <li>本地添加远程地址<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add productionServer ssh://ubuntu@xxx.xxx.xxx.xxx/usr/share/nginx/git_dir</span><br></pre></td></tr></table></figure>
 
@@ -335,8 +333,6 @@
 <h4 id="git-pull与-rebase"><a href="#git-pull与-rebase" class="headerlink" title="git pull与 rebase"></a>git pull与 rebase</h4><p>今天<br>git pull origin master:master –rebase<br>发生了错误<br>! [rejected] (non-fast-forward)</p>
 <p>一般non-fast-forward 这个错误是发生在push的时候和远程节点不对应，但是今天Git pull 也发生了问题，但是奇怪的是<br>git pull origin master –rebase<br>却可以正常运行。</p>
 
-          
-        
       
     </div>
     
@@ -353,144 +349,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/17/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/17/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-17T17:33:09+08:00">
-                2019-11-17
-              </time>
+              <a href="/2019/11/17/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -500,10 +380,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -511,6 +392,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -531,8 +416,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -574,6 +468,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#本地多个-remote-配置（同步推送到线上服务器）"><span class="nav-number">1.</span> <span class="nav-text">本地多个 remote 配置（同步推送到线上服务器）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git-Config中receive-denyCurrentBranch做了什么"><span class="nav-number">2.</span> <span class="nav-text">Git Config中receive.denyCurrentBranch做了什么?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-checkout"><span class="nav-number">3.</span> <span class="nav-text">git checkout</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-reset"><span class="nav-number"></span> <span class="nav-text">git reset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-stash"><span class="nav-number"></span> <span class="nav-text">git stash</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#git-rebase"><span class="nav-number">1.</span> <span class="nav-text">git rebase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-cherry-pick"><span class="nav-number">2.</span> <span class="nav-text">git cherry-pick</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-log-and-git-reflog"><span class="nav-number">3.</span> <span class="nav-text">git log and git reflog</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-branch"><span class="nav-number">4.</span> <span class="nav-text">git branch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-pull与-rebase"><span class="nav-number">5.</span> <span class="nav-text">git pull与 rebase</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -707,6 +617,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
