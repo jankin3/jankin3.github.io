@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-17T15:30:44.364Z</updated>
+  <updated>2019-11-21T17:00:29.089Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>XMLHttpRequest</title>
+    <link href="http://yoursite.com/2019/11/22/XMLHttpRequest/"/>
+    <id>http://yoursite.com/2019/11/22/XMLHttpRequest/</id>
+    <published>2019-11-21T16:53:02.000Z</published>
+    <updated>2019-11-21T17:00:29.089Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="XMLHttpRequest是什么？"><a href="#XMLHttpRequest是什么？" class="headerlink" title="XMLHttpRequest是什么？"></a>XMLHttpRequest是什么？</h3><p>XMLHttpRequest是一个浏览器接口，使得Javascript可以进行HTTP(S)通信。<br>关联: 有了XMLHttpRequest对象。ajax操作因此得以诞生。所以在这里 ajax，是一种技术方案</p><p>这里主要理解XMLHttpRequest是什么，具体代码细节不细说了，请参考</p><blockquote><p><a href="https://segmentfault.com/a/1190000004322487#articleHeader18" target="_blank" rel="noopener">https://segmentfault.com/a/1190000004322487#articleHeader18</a><br><a href="http://www.ruanyifeng.com/blog/2012/09/xmlhttprequest_level_2.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2012/09/xmlhttprequest_level_2.html</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;XMLHttpRequest是什么？&quot;&gt;&lt;a href=&quot;#XMLHttpRequest是什么？&quot; class=&quot;headerlink&quot; title=&quot;XMLHttpRequest是什么？&quot;&gt;&lt;/a&gt;XMLHttpRequest是什么？&lt;/h3&gt;&lt;p&gt;XMLHtt
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>regular-expression-note</title>
