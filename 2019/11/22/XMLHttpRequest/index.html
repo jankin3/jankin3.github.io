@@ -46,14 +46,14 @@
   };
 </script>
 
-  <meta name="description" content="XMLHttpRequest是什么？XMLHttpRequest是一个浏览器接口，使得Javascript可以进行HTTP(S)通信。关联: 有了XMLHttpRequest对象。ajax操作因此得以诞生。所以在这里 ajax，是一种技术方案 这里主要理解XMLHttpRequest是什么，具体代码细节不细说了，请参考  https:&#x2F;&#x2F;segmentfault.com&#x2F;a&#x2F;11900000043">
+  <meta name="description" content="XMLHttpRequest是什么？XMLHttpRequest是一个浏览器接口，使得Javascript可以进行HTTP(S)通信。关联: 有了XMLHttpRequest对象。ajax操作因此得以诞生。所以在这里 ajax，是一种技术方案 js ajax发送请求js12345678910111213141516171819202122&#x2F;&#x2F; getvar httpRequest = new XM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="XMLHttpRequest">
+<meta property="og:title" content="XMLHttpRequest 与 js">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;XMLHttpRequest&#x2F;index.html">
 <meta property="og:site_name" content="hexo">
-<meta property="og:description" content="XMLHttpRequest是什么？XMLHttpRequest是一个浏览器接口，使得Javascript可以进行HTTP(S)通信。关联: 有了XMLHttpRequest对象。ajax操作因此得以诞生。所以在这里 ajax，是一种技术方案 这里主要理解XMLHttpRequest是什么，具体代码细节不细说了，请参考  https:&#x2F;&#x2F;segmentfault.com&#x2F;a&#x2F;11900000043">
+<meta property="og:description" content="XMLHttpRequest是什么？XMLHttpRequest是一个浏览器接口，使得Javascript可以进行HTTP(S)通信。关联: 有了XMLHttpRequest对象。ajax操作因此得以诞生。所以在这里 ajax，是一种技术方案 js ajax发送请求js12345678910111213141516171819202122&#x2F;&#x2F; getvar httpRequest = new XM">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-21T17:00:29.089Z">
+<meta property="og:updated_time" content="2019-11-22T16:19:27.566Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/22/XMLHttpRequest/">
@@ -70,7 +70,7 @@
   };
 </script>
 
-  <title>XMLHttpRequest | hexo</title>
+  <title>XMLHttpRequest 与 js | hexo</title>
   
 
 
@@ -182,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          XMLHttpRequest
+          XMLHttpRequest 与 js
         </h1>
 
         <div class="post-meta">
@@ -191,10 +191,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2019-11-22 00:53:02 / Modified: 01:00:29" itemprop="dateCreated datePublished" datetime="2019-11-22T00:53:02+08:00">2019-11-22</time>
+              <time title="Created: 2019-11-22 00:53:02" itemprop="dateCreated datePublished" datetime="2019-11-22T00:53:02+08:00">2019-11-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-11-23 00:19:27" itemprop="dateModified" datetime="2019-11-23T00:19:27+08:00">2019-11-23</time>
+              </span>
 
           
 
@@ -208,6 +214,11 @@
 
       
         <h3 id="XMLHttpRequest是什么？"><a href="#XMLHttpRequest是什么？" class="headerlink" title="XMLHttpRequest是什么？"></a>XMLHttpRequest是什么？</h3><p>XMLHttpRequest是一个浏览器接口，使得Javascript可以进行HTTP(S)通信。<br>关联: 有了XMLHttpRequest对象。ajax操作因此得以诞生。所以在这里 ajax，是一种技术方案</p>
+<h3 id="js-ajax发送请求"><a href="#js-ajax发送请求" class="headerlink" title="js ajax发送请求"></a>js ajax发送请求</h3><figure class="highlight plain"><figcaption><span>js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// get</span><br><span class="line">var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象</span><br><span class="line">httpRequest.open(&apos;GET&apos;, &apos;url&apos;, true);//第二步：打开连接  将请求参数写在url中  ps:&quot;./Ptest.php?name=test&amp;nameone=testone&quot;</span><br><span class="line">httpRequest.send();//第三步：发送请求  将请求参数写在URL中</span><br><span class="line">httpRequest.onreadystatechange = function () &#123;</span><br><span class="line">    if (httpRequest.readyState == 4 &amp;&amp; httpRequest.status == 200) &#123;</span><br><span class="line">        var json = httpRequest.responseText;</span><br><span class="line">        console.log(json);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// post</span><br><span class="line">var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象</span><br><span class="line">httpRequest.open(&apos;POST&apos;, &apos;url&apos;, true); //第二步：打开连接</span><br><span class="line">httpRequest.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）</span><br><span class="line">httpRequest.send(&apos;name=teswe&amp;ee=ef&apos;);//发送请求 将情头体写在send中</span><br><span class="line">httpRequest.onreadystatechange = function () &#123;//请求后的回调接口，可将请求成功后要执行的程序写在其中</span><br><span class="line">    if (httpRequest.readyState == 4 &amp;&amp; httpRequest.status == 200) &#123;//验证请求是否发送成功</span><br><span class="line">        var json = httpRequest.responseText;//获取到服务端返回的数据</span><br><span class="line">        console.log(json);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="js-发送非ajax请求"><a href="#js-发送非ajax请求" class="headerlink" title="js 发送非ajax请求"></a>js 发送非ajax请求</h3><p>get 请求就不必多说了。 <code>windows.location.href = &#39;url&#39;;</code><br>post, 我是模拟表单进行提交post请求</p>
+<figure class="highlight plain"><figcaption><span>js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var temp = document.createElement(&quot;form&quot;);</span><br><span class="line">temp.action = &apos;%s&apos;;</span><br><span class="line">temp.method = &quot;post&quot;;</span><br><span class="line">temp.style.display = &quot;none&quot;;</span><br><span class="line">form_data = &#123;</span><br><span class="line">    &apos;action&apos;: &apos;applycoupon&apos;,</span><br><span class="line">    &apos;couponcode&apos;: &apos;%s&apos;,</span><br><span class="line">&#125;;</span><br><span class="line">for(var key in form_data)&#123;</span><br><span class="line">    var opt = document.createElement(&quot;textarea&quot;);</span><br><span class="line">    opt.name = key;</span><br><span class="line">    opt.value = form_data[key];</span><br><span class="line">    temp.appendChild(opt);</span><br><span class="line">&#125;</span><br><span class="line">document.body.appendChild(temp);</span><br><span class="line">temp.submit();</span><br></pre></td></tr></table></figure>
+
 <p>这里主要理解XMLHttpRequest是什么，具体代码细节不细说了，请参考</p>
 <blockquote>
 <p><a href="https://segmentfault.com/a/1190000004322487#articleHeader18" target="_blank" rel="noopener">https://segmentfault.com/a/1190000004322487#articleHeader18</a><br><a href="http://www.ruanyifeng.com/blog/2012/09/xmlhttprequest_level_2.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2012/09/xmlhttprequest_level_2.html</a></p>
@@ -271,7 +282,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#XMLHttpRequest是什么？"><span class="nav-number">1.</span> <span class="nav-text">XMLHttpRequest是什么？</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#XMLHttpRequest是什么？"><span class="nav-number">1.</span> <span class="nav-text">XMLHttpRequest是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-ajax发送请求"><span class="nav-number">2.</span> <span class="nav-text">js ajax发送请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-发送非ajax请求"><span class="nav-number">3.</span> <span class="nav-text">js 发送非ajax请求</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
