@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-22T16:19:27.566Z</updated>
+  <updated>2019-11-24T15:58:53.277Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux-file-permission</title>
+    <link href="http://yoursite.com/2019/11/24/linux-file-permission/"/>
+    <id>http://yoursite.com/2019/11/24/linux-file-permission/</id>
+    <published>2019-11-24T15:56:57.000Z</published>
+    <updated>2019-11-24T15:58:53.277Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="linux-文件权限"><a href="#linux-文件权限" class="headerlink" title="linux 文件权限"></a>linux 文件权限</h1><h2 id="文件权限：每个文件可以针对每个用户具有不同的权限"><a href="#文件权限：每个文件可以针对每个用户具有不同的权限" class="headerlink" title="文件权限：每个文件可以针对每个用户具有不同的权限"></a>文件权限：每个文件可以针对每个用户具有不同的权限</h2><h2 id="用户和用户组"><a href="#用户和用户组" class="headerlink" title="用户和用户组"></a>用户和用户组</h2><h3 id="为什么要有这么细致的分级？"><a href="#为什么要有这么细致的分级？" class="headerlink" title="为什么要有这么细致的分级？"></a>为什么要有这么细致的分级？</h3><ul><li>安全防护，因为linux多用户，多任务的环境。每个用户的权限隐私很重要</li></ul><h3 id="文件用户身份"><a href="#文件用户身份" class="headerlink" title="文件用户身份"></a>文件用户身份</h3><ul><li>own/group/other</li></ul><h3 id="权限等级与意义"><a href="#权限等级与意义" class="headerlink" title="权限等级与意义"></a>权限等级与意义</h3><ul><li><p>read</p><ul><li>对文件: 读取文件</li><li>对目录:读取该目录结构</li></ul></li><li><p>write</p><ul><li>对文件: 包括编辑新增等，但是不包括删除, 那么怎么才能删除文件呢？</li><li>对目录:更改目录结构的，包括增删改，注意删除的权限在这里</li></ul></li><li><p>execute</p><ul><li>对文件:可执行</li><li>对目录:注意，代表用户是否可以进入该目录，区分与r权限</li></ul></li></ul><h2 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h2><h3 id="定义-一个文件拥有的属性"><a href="#定义-一个文件拥有的属性" class="headerlink" title="定义:一个文件拥有的属性"></a>定义:一个文件拥有的属性</h3><h3 id="内容包括-权限，连接，所有者，用户组，文件容量，修改日期，文件名"><a href="#内容包括-权限，连接，所有者，用户组，文件容量，修改日期，文件名" class="headerlink" title="内容包括:权限，连接，所有者，用户组，文件容量，修改日期，文件名"></a>内容包括:权限，连接，所有者，用户组，文件容量，修改日期，文件名</h3><h3 id="command-chgrp-chown-chmod"><a href="#command-chgrp-chown-chmod" class="headerlink" title="command:chgrp/chown/chmod"></a>command:chgrp/chown/chmod</h3><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;linux-文件权限&quot;&gt;&lt;a href=&quot;#linux-文件权限&quot; class=&quot;headerlink&quot; title=&quot;linux 文件权限&quot;&gt;&lt;/a&gt;linux 文件权限&lt;/h1&gt;&lt;h2 id=&quot;文件权限：每个文件可以针对每个用户具有不同的权限&quot;&gt;&lt;a href
+      
+    
+    </summary>
+    
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>XMLHttpRequest 与 js</title>
