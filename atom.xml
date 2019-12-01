@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-24T15:58:53.277Z</updated>
+  <updated>2019-12-01T15:03:25.714Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python-datetime</title>
+    <link href="http://yoursite.com/2019/12/01/python-datetime/"/>
+    <id>http://yoursite.com/2019/12/01/python-datetime/</id>
+    <published>2019-12-01T14:46:31.000Z</published>
+    <updated>2019-12-01T15:03:25.714Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="python-时间和日期"><a href="#python-时间和日期" class="headerlink" title="python 时间和日期"></a>python 时间和日期</h1><h2 id="时间字符串格式化"><a href="#时间字符串格式化" class="headerlink" title="时间字符串格式化"></a>时间字符串格式化</h2><p><a href="https://docs.python.org/zh-cn/3/library/datetime.html#strftime-strptime-behavior" target="_blank" rel="noopener">https://docs.python.org/zh-cn/3/library/datetime.html#strftime-strptime-behavior</a></p><h3 id="时间元组转换成字符串-strptime"><a href="#时间元组转换成字符串-strptime" class="headerlink" title="时间元组转换成字符串: strptime(),"></a>时间元组转换成字符串: strptime(),</h3><h3 id="字符串转换成时间元组-strftime"><a href="#字符串转换成时间元组-strftime" class="headerlink" title="字符串转换成时间元组:strftime(),"></a>字符串转换成时间元组:strftime(),</h3><h2 id="时间换算"><a href="#时间换算" class="headerlink" title="时间换算"></a>时间换算</h2><h3 id="主要是datetime-timedelta"><a href="#主要是datetime-timedelta" class="headerlink" title="主要是datetime.timedelta()"></a>主要是datetime.timedelta()</h3><h2 id="主要模块"><a href="#主要模块" class="headerlink" title="主要模块"></a>主要模块</h2><h3 id="time"><a href="#time" class="headerlink" title="time"></a>time</h3><h3 id="datetime"><a href="#datetime" class="headerlink" title="datetime"></a>datetime</h3><p><a href="https://docs.python.org/zh-cn/3/library/datetime.html" target="_blank" rel="noopener">https://docs.python.org/zh-cn/3/library/datetime.html</a></p><ul><li><p>有效类型</p><ul><li>date</li><li>time</li><li>datetime</li><li>timedelta</li><li>tzinfo</li><li>timezone</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;python-时间和日期&quot;&gt;&lt;a href=&quot;#python-时间和日期&quot; class=&quot;headerlink&quot; title=&quot;python 时间和日期&quot;&gt;&lt;/a&gt;python 时间和日期&lt;/h1&gt;&lt;h2 id=&quot;时间字符串格式化&quot;&gt;&lt;a href=&quot;#时间字符串
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>linux-file-permission</title>
