@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-09T15:13:54.290Z</updated>
+  <updated>2019-12-09T16:02:45.027Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql-lock</title>
+    <link href="http://yoursite.com/2019/12/09/mysql-lock/"/>
+    <id>http://yoursite.com/2019/12/09/mysql-lock/</id>
+    <published>2019-12-09T15:58:44.000Z</published>
+    <updated>2019-12-09T16:02:45.027Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="mysql-锁机制"><a href="#mysql-锁机制" class="headerlink" title="mysql 锁机制"></a>mysql 锁机制</h1><p><a href="https://learnku.com/articles/28772#c812c1" target="_blank" rel="noopener">https://learnku.com/articles/28772#c812c1</a> 锁机制</p><h2 id="作用：解决并发访问"><a href="#作用：解决并发访问" class="headerlink" title="作用：解决并发访问"></a>作用：解决并发访问</h2><h2 id="所处的处置：一般-表锁在mysql-server层，行锁在索引层"><a href="#所处的处置：一般-表锁在mysql-server层，行锁在索引层" class="headerlink" title="所处的处置：一般,表锁在mysql server层，行锁在索引层"></a>所处的处置：一般,表锁在mysql server层，行锁在索引层</h2><h2 id="锁分类"><a href="#锁分类" class="headerlink" title="锁分类"></a>锁分类</h2><h3 id="锁粒度"><a href="#锁粒度" class="headerlink" title="锁粒度"></a>锁粒度</h3><ul><li><p>表锁</p></li><li><p>行锁</p><ul><li>实现方式：索引加锁</li></ul></li><li><p>页锁</p></li></ul><h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><ul><li><p>写锁</p><ul><li>for update. 比读锁有更高的优先级</li></ul></li><li><p>读锁</p><ul><li>lock in share mode, 普通select innodb不会有任何锁</li></ul></li></ul><h3 id="锁模式"><a href="#锁模式" class="headerlink" title="锁模式"></a>锁模式</h3><ul><li><p>记录锁</p></li><li><p>间隙锁</p></li><li><p>next-key锁</p></li><li><p>意向锁</p><ul><li>是一个标记锁，为了实现表锁和行锁不同的锁粒度</li></ul></li><li><p>插入意向锁</p></li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;mysql-锁机制&quot;&gt;&lt;a href=&quot;#mysql-锁机制&quot; class=&quot;headerlink&quot; title=&quot;mysql 锁机制&quot;&gt;&lt;/a&gt;mysql 锁机制&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://learnku.com/articles/2877
+      
+    
+    </summary>
+    
+    
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+      <category term="锁" scheme="http://yoursite.com/tags/%E9%94%81/"/>
+    
+  </entry>
   
   <entry>
     <title>string-decode</title>
