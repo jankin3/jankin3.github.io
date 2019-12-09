@@ -166,6 +166,95 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/09/string-decode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jankin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王juju">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/09/string-decode/" class="post-title-link" itemprop="url">string-decode</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-12-09 23:13:12 / Modified: 23:13:54" itemprop="dateCreated datePublished" datetime="2019-12-09T23:13:12+08:00">2019-12-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="字符串编码"><a href="#字符串编码" class="headerlink" title="字符串编码"></a>字符串编码</h1><p>发展与概述文章<a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html</a></p>
+<h2 id="意义-使机器认识不同的字符串"><a href="#意义-使机器认识不同的字符串" class="headerlink" title="意义:使机器认识不同的字符串"></a>意义:使机器认识不同的字符串</h2><h2 id="编码分类与发展"><a href="#编码分类与发展" class="headerlink" title="编码分类与发展"></a>编码分类与发展</h2><p>ps:utf-8是Unicode的一种实现方式,从计算机工作方式来说一般在utf-8是用来存储和传输，unicode 一般用来转换</p>
+<h3 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h3><ul>
+<li>英语字符和二进制位对应</li>
+</ul>
+<h3 id="unicode"><a href="#unicode" class="headerlink" title="unicode"></a>unicode</h3><ul>
+<li>所有的字符对应二进制位</li>
+</ul>
+<h3 id="utf-8"><a href="#utf-8" class="headerlink" title="utf-8"></a>utf-8</h3><ul>
+<li>以变长方式实现了unicode编码</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="python2-编码问题"><a href="#python2-编码问题" class="headerlink" title="python2 编码问题"></a>python2 编码问题</h3><p>细节请看：<a href="https://www.jianshu.com/p/58d5f64813dc" target="_blank" rel="noopener">https://www.jianshu.com/p/58d5f64813dc</a></p>
+<ul>
+<li><p>type:str与unicode</p>
+<ul>
+<li>str 是Unicode经过编码的字节</li>
+<li>真正的字符串</li>
+</ul>
+</li>
+<li><p>编码解码错误</p>
+<ul>
+<li>python 会隐式地进行编码、解码，默认采用 ascii</li>
+</ul>
+</li>
+<li><p>类型转换</p>
+<ul>
+<li>2种类型的字符串都提供了 encode 和 decode 方法，通过类型转换解决问题</li>
+</ul>
+</li>
+</ul>
+<p><em>XMind: ZEN - Trial Version</em></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/01/python-datetime/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -675,7 +764,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
