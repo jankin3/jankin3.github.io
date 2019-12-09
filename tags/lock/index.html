@@ -46,18 +46,14 @@
   };
 </script>
 
-  <meta name="description" content="mysql 锁机制https:&#x2F;&#x2F;learnku.com&#x2F;articles&#x2F;28772#c812c1 锁机制 作用：解决并发访问所处的处置：一般,表锁在mysql server层，行锁在索引层锁分类锁粒度 表锁  行锁  实现方式：索引加锁   页锁   兼容性 写锁  for update. 比读锁有更高的优先级   读锁  lock in share mode, 普通select innodb">
-<meta name="keywords" content="mysql,lock">
-<meta property="og:type" content="article">
-<meta property="og:title" content="mysql-lock">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;mysql-lock&#x2F;index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="王juju">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;tags&#x2F;lock&#x2F;index.html">
 <meta property="og:site_name" content="王juju">
-<meta property="og:description" content="mysql 锁机制https:&#x2F;&#x2F;learnku.com&#x2F;articles&#x2F;28772#c812c1 锁机制 作用：解决并发访问所处的处置：一般,表锁在mysql server层，行锁在索引层锁分类锁粒度 表锁  行锁  实现方式：索引加锁   页锁   兼容性 写锁  for update. 比读锁有更高的优先级   读锁  lock in share mode, 普通select innodb">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-09T16:14:33.391Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2019/12/09/mysql-lock/">
+<link rel="canonical" href="http://yoursite.com/tags/lock/">
 
 
 <script id="page-configurations">
@@ -65,13 +61,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true,
+    isPost: false,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>mysql-lock | 王juju</title>
+  <title>Tag: lock | 王juju</title>
   
 
 
@@ -170,130 +166,50 @@
           <div class="content">
             
 
-  <div class="posts-expand">
-      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/09/mysql-lock/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jankin">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="王juju">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          mysql-lock
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h1 class="collection-header">lock
+          <small>Tag</small>
         </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-12-09 23:58:44" itemprop="dateCreated datePublished" datetime="2019-12-09T23:58:44+08:00">2019-12-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-10 00:14:33" itemprop="dateModified" datetime="2019-12-10T00:14:33+08:00">2019-12-10</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+      </div>
 
       
-        <h1 id="mysql-锁机制"><a href="#mysql-锁机制" class="headerlink" title="mysql 锁机制"></a>mysql 锁机制</h1><p><a href="https://learnku.com/articles/28772#c812c1" target="_blank" rel="noopener">https://learnku.com/articles/28772#c812c1</a> 锁机制</p>
-<h2 id="作用：解决并发访问"><a href="#作用：解决并发访问" class="headerlink" title="作用：解决并发访问"></a>作用：解决并发访问</h2><h2 id="所处的处置：一般-表锁在mysql-server层，行锁在索引层"><a href="#所处的处置：一般-表锁在mysql-server层，行锁在索引层" class="headerlink" title="所处的处置：一般,表锁在mysql server层，行锁在索引层"></a>所处的处置：一般,表锁在mysql server层，行锁在索引层</h2><h2 id="锁分类"><a href="#锁分类" class="headerlink" title="锁分类"></a>锁分类</h2><h3 id="锁粒度"><a href="#锁粒度" class="headerlink" title="锁粒度"></a>锁粒度</h3><ul>
-<li><p>表锁</p>
-</li>
-<li><p>行锁</p>
-<ul>
-<li>实现方式：索引加锁</li>
-</ul>
-</li>
-<li><p>页锁</p>
-</li>
-</ul>
-<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><ul>
-<li><p>写锁</p>
-<ul>
-<li>for update. 比读锁有更高的优先级</li>
-</ul>
-</li>
-<li><p>读锁</p>
-<ul>
-<li>lock in share mode, 普通select innodb不会有任何锁</li>
-</ul>
-</li>
-</ul>
-<h3 id="锁模式"><a href="#锁模式" class="headerlink" title="锁模式"></a>锁模式</h3><ul>
-<li><p>记录锁</p>
-</li>
-<li><p>间隙锁</p>
-</li>
-<li><p>next-key锁</p>
-</li>
-<li><p>意向锁</p>
-<ul>
-<li>是一个标记锁，为了实现表锁和行锁不同的锁粒度</li>
-</ul>
-</li>
-<li><p>插入意向锁</p>
-</li>
-</ul>
-<p><em>XMind: ZEN - Trial Version</em></p>
-
+    <div class="collection-year">
+      <h1 class="collection-header">2019</h1>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/mysql/" rel="tag"># mysql</a>
-              <a href="/tags/lock/" rel="tag"># lock</a>
-          </div>
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2019-12-09T23:58:44+08:00"
+              content="2019-12-09">
+          12-09
+        </time>
+      </div>
 
-        
+      <h2 class="post-title">
+          <a class="post-title-link" href="/2019/12/09/mysql-lock/" itemprop="url">
+            <span itemprop="name">mysql-lock</span>
+          </a>
+      </h2>
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-                <a href="/2019/12/09/string-decode/" rel="next" title="string-decode">
-                  <i class="fa fa-chevron-left"></i> string-decode
-                </a>
-            </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-            </div>
-          </div>
-      </footer>
-    
+    </header>
   </article>
+
+    </div>
+  </div>
   
   
   
 
-  </div>
+  
+
 
 
           </div>
@@ -322,7 +238,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql-锁机制"><span class="nav-number">1.</span> <span class="nav-text">mysql 锁机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#作用：解决并发访问"><span class="nav-number">1.1.</span> <span class="nav-text">作用：解决并发访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所处的处置：一般-表锁在mysql-server层，行锁在索引层"><span class="nav-number">1.2.</span> <span class="nav-text">所处的处置：一般,表锁在mysql server层，行锁在索引层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁分类"><span class="nav-number">1.3.</span> <span class="nav-text">锁分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#锁粒度"><span class="nav-number">1.3.1.</span> <span class="nav-text">锁粒度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容性"><span class="nav-number">1.3.2.</span> <span class="nav-text">兼容性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#锁模式"><span class="nav-number">1.3.3.</span> <span class="nav-text">锁模式</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
