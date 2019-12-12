@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-12T11:10:38.154Z</updated>
+  <updated>2019-12-12T11:13:25.756Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="http://yoursite.com/2019/12/12/shell-script/"/>
     <id>http://yoursite.com/2019/12/12/shell-script/</id>
     <published>2019-12-12T11:10:38.000Z</published>
-    <updated>2019-12-12T11:10:38.154Z</updated>
+    <updated>2019-12-12T11:13:25.756Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="shell-脚本"><a href="#shell-脚本" class="headerlink" title="shell 脚本"></a>shell 脚本</h1><h2 id="作用：处理用户和系统的交互"><a href="#作用：处理用户和系统的交互" class="headerlink" title="作用：处理用户和系统的交互"></a>作用：处理用户和系统的交互</h2><h2 id="语法基础"><a href="#语法基础" class="headerlink" title="语法基础"></a>语法基础</h2><p>详细请看<a href="https://www.cnblogs.com/skywang12345/archive/2013/05/30/3106570.html#a1" target="_blank" rel="noopener">https://www.cnblogs.com/skywang12345/archive/2013/05/30/3106570.html#a1</a></p><h2 id="相关拓展"><a href="#相关拓展" class="headerlink" title="相关拓展"></a>相关拓展</h2><h3 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h3><p>原文:<a href="http://www.ruanyifeng.com/blog/2017/11/bash-set.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2017/11/bash-set.html</a></p><ul><li><p>问题：</p><ul><li>目前shell 遇到错误不会自动暂停，会继续向下执行，这个其他python之类程序有很大不同，很可能产生和预期不一样的结果</li></ul></li><li><p>解决:set command用来定制环境</p><ul><li><p>-u 遇到不存在的变量报错(同-o nounset)</p></li><li><p>错误处理</p><ul><li><p>command || exit 1</p></li><li><p>-e:发生错误，就终止执行(同-o errexit)</p></li><li><p>特殊对于管道命令</p><ul><li>特殊性：Bash 会把最后一个子命令的返回值，作为整个命令的返回值</li><li>set -o pipefail:个人理解是把管道内部命令抛出去然后外部-e 会捕获，所以对于管道内部其实还是会继续执行操作</li></ul></li></ul></li><li><p>-x 输出详细输入输出(同-o xtrace)</p></li><li><p>汇总:</p><ul><li>shell 内部：set -euxo pipefail（推荐）</li><li>执行时：bash -euxo pipefail xxx.sh</li></ul></li></ul></li></ul><h3 id="ssh交互"><a href="#ssh交互" class="headerlink" title="ssh交互"></a>ssh交互</h3><ul><li><p>简介:ssh 不单可以登录，可以直接执行相关命令ssh <a href="mailto:nick@xxx.xxx.xxx.xxx" target="_blank" rel="noopener">nick@xxx.xxx.xxx.xxx</a> “df -h”</p></li><li><p>shell  中需要与remote server 交互</p><ul><li><p>简单命令</p><ul><li>可以直接放在后面,使用引号, 例如ssh  $remote_host “mysqldump -uxxx-pxxx xxx”</li><li>缺点：(不能传递变量)</li></ul></li><li><p>复杂命令</p><ul><li>想要实现复杂的命令,可以写在外部脚本中</li><li>eg:ssh <a href="mailto:nick@xxx.xxx.xxx.xxx" target="_blank" rel="noopener">nick@xxx.xxx.xxx.xxx</a> ‘bash -s’ &lt; test.sh var1 var2</li></ul></li></ul></li></ul><h3 id="相关操作符"><a href="#相关操作符" class="headerlink" title="相关操作符"></a>相关操作符</h3><ul><li><a href="https://blog.csdn.net/x1269778817/article/details/46535729" target="_blank" rel="noopener">https://blog.csdn.net/x1269778817/article/details/46535729</a></li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;shell-脚本&quot;&gt;&lt;a href=&quot;#shell-脚本&quot; class=&quot;headerlink&quot; title=&quot;shell 脚本&quot;&gt;&lt;/a&gt;shell 脚本&lt;/h1&gt;&lt;h2 id=&quot;作用：处理用户和系统的交互&quot;&gt;&lt;a href=&quot;#作用：处理用户和系统的交互&quot; c
+      
     
     </summary>
     
@@ -62,7 +69,7 @@
     <link href="http://yoursite.com/2019/12/09/string-decode/"/>
     <id>http://yoursite.com/2019/12/09/string-decode/</id>
     <published>2019-12-09T15:13:12.000Z</published>
-    <updated>2019-12-12T11:11:26.516Z</updated>
+    <updated>2019-12-12T11:13:23.224Z</updated>
     
     <content type="html"><![CDATA[<h1 id="字符串编码"><a href="#字符串编码" class="headerlink" title="字符串编码"></a>字符串编码</h1><p>发展与概述文章<a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html</a></p><h2 id="意义-使机器认识不同的字符串"><a href="#意义-使机器认识不同的字符串" class="headerlink" title="意义:使机器认识不同的字符串"></a>意义:使机器认识不同的字符串</h2><h2 id="编码分类与发展"><a href="#编码分类与发展" class="headerlink" title="编码分类与发展"></a>编码分类与发展</h2><p>ps:utf-8是Unicode的一种实现方式,从计算机工作方式来说一般在utf-8是用来存储和传输，unicode 一般用来转换</p><h3 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h3><ul><li>英语字符和二进制位对应</li></ul><h3 id="unicode"><a href="#unicode" class="headerlink" title="unicode"></a>unicode</h3><ul><li>所有的字符对应二进制位</li></ul><h3 id="utf-8"><a href="#utf-8" class="headerlink" title="utf-8"></a>utf-8</h3><ul><li>以变长方式实现了unicode编码</li></ul><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="python2-编码问题"><a href="#python2-编码问题" class="headerlink" title="python2 编码问题"></a>python2 编码问题</h3><p>细节请看：<a href="https://www.jianshu.com/p/58d5f64813dc" target="_blank" rel="noopener">https://www.jianshu.com/p/58d5f64813dc</a></p><ul><li><p>type:str与unicode</p><ul><li>str 是Unicode经过编码的字节</li><li>真正的字符串</li></ul></li><li><p>编码解码错误</p><ul><li>python 会隐式地进行编码、解码，默认采用 ascii</li></ul></li><li><p>类型转换</p><ul><li>2种类型的字符串都提供了 encode 和 decode 方法，通过类型转换解决问题</li></ul></li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
     
