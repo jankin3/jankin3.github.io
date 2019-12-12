@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-09T16:14:33.391Z</updated>
+  <updated>2019-12-12T11:10:38.154Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>shell-script</title>
+    <link href="http://yoursite.com/2019/12/12/shell-script/"/>
+    <id>http://yoursite.com/2019/12/12/shell-script/</id>
+    <published>2019-12-12T11:10:38.000Z</published>
+    <updated>2019-12-12T11:10:38.154Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>mysql-lock</title>
@@ -47,7 +62,7 @@
     <link href="http://yoursite.com/2019/12/09/string-decode/"/>
     <id>http://yoursite.com/2019/12/09/string-decode/</id>
     <published>2019-12-09T15:13:12.000Z</published>
-    <updated>2019-12-09T15:13:54.290Z</updated>
+    <updated>2019-12-12T11:11:26.516Z</updated>
     
     <content type="html"><![CDATA[<h1 id="字符串编码"><a href="#字符串编码" class="headerlink" title="字符串编码"></a>字符串编码</h1><p>发展与概述文章<a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html</a></p><h2 id="意义-使机器认识不同的字符串"><a href="#意义-使机器认识不同的字符串" class="headerlink" title="意义:使机器认识不同的字符串"></a>意义:使机器认识不同的字符串</h2><h2 id="编码分类与发展"><a href="#编码分类与发展" class="headerlink" title="编码分类与发展"></a>编码分类与发展</h2><p>ps:utf-8是Unicode的一种实现方式,从计算机工作方式来说一般在utf-8是用来存储和传输，unicode 一般用来转换</p><h3 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h3><ul><li>英语字符和二进制位对应</li></ul><h3 id="unicode"><a href="#unicode" class="headerlink" title="unicode"></a>unicode</h3><ul><li>所有的字符对应二进制位</li></ul><h3 id="utf-8"><a href="#utf-8" class="headerlink" title="utf-8"></a>utf-8</h3><ul><li>以变长方式实现了unicode编码</li></ul><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="python2-编码问题"><a href="#python2-编码问题" class="headerlink" title="python2 编码问题"></a>python2 编码问题</h3><p>细节请看：<a href="https://www.jianshu.com/p/58d5f64813dc" target="_blank" rel="noopener">https://www.jianshu.com/p/58d5f64813dc</a></p><ul><li><p>type:str与unicode</p><ul><li>str 是Unicode经过编码的字节</li><li>真正的字符串</li></ul></li><li><p>编码解码错误</p><ul><li>python 会隐式地进行编码、解码，默认采用 ascii</li></ul></li><li><p>类型转换</p><ul><li>2种类型的字符串都提供了 encode 和 decode 方法，通过类型转换解决问题</li></ul></li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
     
@@ -61,6 +76,8 @@
     </summary>
     
     
+    
+      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
     
   </entry>
   
