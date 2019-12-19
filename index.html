@@ -171,6 +171,112 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/19/mysql-explain/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jankin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王juju">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/19/mysql-explain/" class="post-title-link" itemprop="url">mysql-explain</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-12-19 23:04:57 / Modified: 23:05:38" itemprop="dateCreated datePublished" datetime="2019-12-19T23:04:57+08:00">2019-12-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="mysql-explain"><a href="#mysql-explain" class="headerlink" title="mysql explain"></a>mysql explain</h1><h2 id="作用：sql查询如何执行，近似结果"><a href="#作用：sql查询如何执行，近似结果" class="headerlink" title="作用：sql查询如何执行，近似结果"></a>作用：sql查询如何执行，近似结果</h2><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><h3 id="explain-extend"><a href="#explain-extend" class="headerlink" title="explain extend"></a>explain extend</h3><h3 id="explain-partitions"><a href="#explain-partitions" class="headerlink" title="explain partitions"></a>explain partitions</h3><h2 id="主要行解释"><a href="#主要行解释" class="headerlink" title="主要行解释"></a>主要行解释</h2><h3 id="id"><a href="#id" class="headerlink" title="id"></a>id</h3><ul>
+<li><p>编号，</p>
+<p>标识select 所属行，id越大越先执行，id相同顺序执行</p>
+</li>
+</ul>
+<h3 id="select-type"><a href="#select-type" class="headerlink" title="select type"></a>select type</h3><ul>
+<li>显示对应行是简单还是复杂查询</li>
+</ul>
+<h3 id="type-访问类型"><a href="#type-访问类型" class="headerlink" title="type(访问类型)"></a>type(访问类型)</h3><ul>
+<li><p>NULL</p>
+</li>
+<li><p>const、system</p>
+</li>
+<li><p>eq_ref</p>
+</li>
+<li><p>ref</p>
+</li>
+<li><p>range</p>
+</li>
+<li><p>index</p>
+<ul>
+<li>全表扫描，按照索引</li>
+</ul>
+</li>
+<li><p>ALL</p>
+<ul>
+<li>全表扫描，按行</li>
+</ul>
+</li>
+</ul>
+<h3 id="table"><a href="#table" class="headerlink" title="table"></a>table</h3><ul>
+<li>显示正在访问的表</li>
+</ul>
+<h3 id="ken-len"><a href="#ken-len" class="headerlink" title="ken_len"></a>ken_len</h3><ul>
+<li>索引使用字节数</li>
+</ul>
+<h3 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h3><h3 id="row"><a href="#row" class="headerlink" title="row"></a>row</h3><ul>
+<li>估计读取行数</li>
+</ul>
+<h3 id="filtered"><a href="#filtered" class="headerlink" title="filtered"></a>filtered</h3><h3 id="extra"><a href="#extra" class="headerlink" title="extra"></a>extra</h3><p>参考：<a href="https://www.cnblogs.com/kerrycode/p/9909093.html" target="_blank" rel="noopener">https://www.cnblogs.com/kerrycode/p/9909093.html</a></p>
+<ul>
+<li>Using temporary</li>
+<li>Using filesort</li>
+<li>Using Index</li>
+<li>Using Index Condition</li>
+<li>Using where</li>
+</ul>
+<p><em>XMind: ZEN - Trial Version</em></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/shell-script/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -998,7 +1104,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
