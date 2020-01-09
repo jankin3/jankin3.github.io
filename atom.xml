@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-19T15:05:38.627Z</updated>
+  <updated>2020-01-09T00:41:01.107Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm</title>
+    <link href="http://yoursite.com/2020/01/09/npm/"/>
+    <id>http://yoursite.com/2020/01/09/npm/</id>
+    <published>2020-01-09T00:37:06.000Z</published>
+    <updated>2020-01-09T00:41:01.107Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><h3 id="全称-Node-Package-Manager，即node包管理器"><a href="#全称-Node-Package-Manager，即node包管理器" class="headerlink" title="全称 Node Package Manager，即node包管理器"></a>全称 Node Package Manager，即node包管理器</h3><p><a href="https://zh.wikipedia.org/wiki/Npm" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/Npm</a></p><h2 id="常用功能与命令"><a href="#常用功能与命令" class="headerlink" title="常用功能与命令"></a>常用功能与命令</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul><li><p>npm install</p><ul><li><p>不加后缀直接安装，如果node_modules存在，就不再重新安装了，即使有新，也是如此, -f 强制重新安装</p></li><li><p>package.json与package-lock.json</p><p>参见：<a href="https://juejin.im/post/5d40f9a4e51d45620821ce30" target="_blank" rel="noopener">https://juejin.im/post/5d40f9a4e51d45620821ce30</a></p><ul><li><p>是什么？</p><ul><li>配置文件,锁定安装时的包的版本号</li></ul></li><li><p>配合使用</p><ul><li>如果没有lockfile, npm i会生成一个</li><li>两者兼容，根据localfile 下载</li><li>两者不兼容，会根据package.json下载，并更新lockfile</li></ul></li></ul></li><li><p>npm install <package name>  安装模块的特定版本 use @</p></li></ul></li><li><p>npm ci</p><ul><li>适合安装干净依赖的情况</li><li>快，更严格</li><li>必须有lockfile</li><li>不会修改文件</li></ul></li><li><p>install &amp;&amp; ci</p><p>npm install 读取 package.json 创建依赖项列表，并使用 package-lock.json 来通知要安装这些依赖项的哪个版本。如果某个依赖项在 package.json 中，但是不在 package-lock.json 中，运行 npm install 会将这个依赖项的确定版本更新到 package-lock.json 中。<br>npm ci 是根据 package-lock.json 去安装确定的依赖，package.json 只是用来验证是不是有不匹配的版本，假设 package-lock.json 中存在一个确定版本的依赖 A，如果 package.json 中不存在依赖 A 或者依赖 A 版本和 lock 中不兼容，npm ci 就会报错。</p></li></ul><h3 id="查看包版本"><a href="#查看包版本" class="headerlink" title="查看包版本"></a>查看包版本</h3><ul><li><p>npm list</p><ul><li>默认当前项目下的所有模块以及依赖</li><li>-g 全局</li><li>packagename 查看单独模块</li></ul></li></ul><h3 id="npm-脚本"><a href="#npm-脚本" class="headerlink" title="npm 脚本"></a>npm 脚本</h3><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;npm&quot;&gt;&lt;a href=&quot;#npm&quot; class=&quot;headerlink&quot; title=&quot;npm&quot;&gt;&lt;/a&gt;npm&lt;/h1&gt;&lt;h2 id=&quot;是什么？&quot;&gt;&lt;a href=&quot;#是什么？&quot; class=&quot;headerlink&quot; title=&quot;是什么？&quot;&gt;&lt;/a&gt;是什么
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>mysql-explain</title>

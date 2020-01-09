@@ -171,6 +171,113 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/09/npm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jankin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王juju">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/09/npm/" class="post-title-link" itemprop="url">npm</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-09 08:37:06 / Modified: 08:41:01" itemprop="dateCreated datePublished" datetime="2020-01-09T08:37:06+08:00">2020-01-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><h3 id="全称-Node-Package-Manager，即node包管理器"><a href="#全称-Node-Package-Manager，即node包管理器" class="headerlink" title="全称 Node Package Manager，即node包管理器"></a>全称 Node Package Manager，即node包管理器</h3><p><a href="https://zh.wikipedia.org/wiki/Npm" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/Npm</a></p>
+<h2 id="常用功能与命令"><a href="#常用功能与命令" class="headerlink" title="常用功能与命令"></a>常用功能与命令</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li><p>npm install</p>
+<ul>
+<li><p>不加后缀直接安装，如果node_modules存在，就不再重新安装了，即使有新，也是如此, -f 强制重新安装</p>
+</li>
+<li><p>package.json与package-lock.json</p>
+<p>参见：<a href="https://juejin.im/post/5d40f9a4e51d45620821ce30" target="_blank" rel="noopener">https://juejin.im/post/5d40f9a4e51d45620821ce30</a></p>
+<ul>
+<li><p>是什么？</p>
+<ul>
+<li>配置文件,锁定安装时的包的版本号</li>
+</ul>
+</li>
+<li><p>配合使用</p>
+<ul>
+<li>如果没有lockfile, npm i会生成一个</li>
+<li>两者兼容，根据localfile 下载</li>
+<li>两者不兼容，会根据package.json下载，并更新lockfile</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>npm install <package name>  安装模块的特定版本 use @</p>
+</li>
+</ul>
+</li>
+<li><p>npm ci</p>
+<ul>
+<li>适合安装干净依赖的情况</li>
+<li>快，更严格</li>
+<li>必须有lockfile</li>
+<li>不会修改文件</li>
+</ul>
+</li>
+<li><p>install &amp;&amp; ci</p>
+<p>npm install 读取 package.json 创建依赖项列表，并使用 package-lock.json 来通知要安装这些依赖项的哪个版本。如果某个依赖项在 package.json 中，但是不在 package-lock.json 中，运行 npm install 会将这个依赖项的确定版本更新到 package-lock.json 中。<br>npm ci 是根据 package-lock.json 去安装确定的依赖，package.json 只是用来验证是不是有不匹配的版本，假设 package-lock.json 中存在一个确定版本的依赖 A，如果 package.json 中不存在依赖 A 或者依赖 A 版本和 lock 中不兼容，npm ci 就会报错。</p>
+</li>
+</ul>
+<h3 id="查看包版本"><a href="#查看包版本" class="headerlink" title="查看包版本"></a>查看包版本</h3><ul>
+<li><p>npm list</p>
+<ul>
+<li>默认当前项目下的所有模块以及依赖</li>
+<li>-g 全局</li>
+<li>packagename 查看单独模块</li>
+</ul>
+</li>
+</ul>
+<h3 id="npm-脚本"><a href="#npm-脚本" class="headerlink" title="npm 脚本"></a>npm 脚本</h3><p><em>XMind: ZEN - Trial Version</em></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/19/mysql-explain/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -989,79 +1096,12 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/17/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jankin">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="王juju">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/17/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-17 17:33:09" itemprop="dateCreated datePublished" datetime="2019-11-17T17:33:09+08:00">2019-11-17</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
 
 
 
@@ -1104,7 +1144,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1141,7 +1181,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
