@@ -1,314 +1,133 @@
-/* global CONFIG */
+/*
+* @Author: xzhih
+* @Date:   2018-11-04 23:25:09
+* @Last Modified by:   xzhih
+* @Last Modified time: 2018-12-04 04:43:06
+*/
 
-window.addEventListener('DOMContentLoaded', () => {
-  // Popup Window
-  let isfetched = false;
-  let datas;
-  let isXml = true;
-  // Search DB path
-  let searchPath = CONFIG.path;
-  if (searchPath.length === 0) {
-    searchPath = 'search.xml';
-  } else if (/json$/i.test(searchPath)) {
-    isXml = false;
-  }
-  const path = CONFIG.root + searchPath;
-  const input = document.getElementById('search-input');
-  const resultContent = document.getElementById('search-result');
+// 保存搜索数据
+var keepSearchData = function (siteRoot) {
+    fetch(siteRoot + 'searchData.json')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(resData) {
+        localStorage.setItem('searchData', JSON.stringify(resData));
+    })
+}
 
-  // Ref: https://github.com/ForbesLindesay/unescape-html
-  const unescapeHtml = html => {
-    return String(html)
-      .replace(/&quot;/g, '"')
-      .replace(/&#39;/g, '\'')
-      .replace(/&#x3A;/g, ':')
-      // Replace all the other &#x; chars
-      .replace(/&#(\d+);/g, (m, p) => {
-        return String.fromCharCode(p);
-      })
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>')
-      .replace(/&amp;/g, '&');
-  };
-
-  const getIndexByWord = (word, text, caseSensitive) => {
-    let wordLen = word.length;
-    if (wordLen === 0) return [];
-    let startPosition = 0;
-    let position = [];
-    let index = [];
-    if (!caseSensitive) {
-      text = text.toLowerCase();
-      word = word.toLowerCase();
-    }
-    while ((position = text.indexOf(word, startPosition)) > -1) {
-      index.push({
-        position: position,
-        word    : word
-      });
-      startPosition = position + wordLen;
-    }
-    return index;
-  };
-
-  // Merge hits into slices
-  const mergeIntoSlice = (start, end, index, searchText) => {
-    let item = index[index.length - 1];
-    let position = item.position;
-    let word = item.word;
-    let hits = [];
-    let searchTextCountInSlice = 0;
-    while (position + word.length <= end && index.length !== 0) {
-      if (word === searchText) {
-        searchTextCountInSlice++;
-      }
-      hits.push({
-        position: position,
-        length  : word.length
-      });
-      let wordEnd = position + word.length;
-
-      // Move to next position of hit
-      index.pop();
-      while (index.length !== 0) {
-        item = index[index.length - 1];
-        position = item.position;
-        word = item.word;
-        if (wordEnd > position) {
-          index.pop();
-        } else {
-          break;
+// 检查和获取搜索数据
+var checkAndGetData = function (siteRoot) {
+    fetch(siteRoot + 'searchVersion.txt?t=' + (+new Date()))
+    .then(function(response) {
+        return response.text();
+    })
+    .then(function(resVersion) {
+        if (localStorage.getItem('searchVersion') !== resVersion) {
+            localStorage.setItem('searchVersion', resVersion);
+            keepSearchData(siteRoot)
         }
-      }
-    }
-    return {
-      hits           : hits,
-      start          : start,
-      end            : end,
-      searchTextCount: searchTextCountInSlice
-    };
-  };
+    })
+}
 
-  // Highlight title and content
-  const highlightKeyword = (text, slice) => {
-    let result = '';
-    let prevEnd = slice.start;
-    slice.hits.forEach(hit => {
-      result += text.substring(prevEnd, hit.position);
-      let end = hit.position + hit.length;
-      result += `<b class="search-keyword">${text.substring(hit.position, end)}</b>`;
-      prevEnd = end;
+// 监听搜索
+var searchFunc = function(siteRoot) {
+    checkAndGetData(siteRoot)
+    var localSearchData = localStorage.getItem("searchData");
+    var datas = JSON.parse(localSearchData);
+    var input = document.getElementById("local-search-input");
+    if (!input) return;
+    var resultContent = document.getElementById("local-search-result");
+    input.addEventListener("input", function() {
+        if (typeof(localSearchData) !== 'string') {
+            localSearchData = localStorage.getItem("searchData");
+            datas = JSON.parse(localSearchData);
+        }
+        printRs(this, datas, resultContent)
     });
-    result += text.substring(prevEnd, slice.end);
-    return result;
-  };
+};
 
-  const inputEventFunction = () => {
-    let searchText = input.value.trim().toLowerCase();
-    let keywords = searchText.split(/[-\s]+/);
-    if (keywords.length > 1) {
-      keywords.push(searchText);
-    }
-    let resultItems = [];
-    if (searchText.length > 0) {
-      // Perform local searching
-      datas.forEach(data => {
-        // Only match articles with not empty titles
-        if (!data.title) return;
-        let searchTextCount = 0;
-        let title = data.title.trim();
-        let titleInLowerCase = title.toLowerCase();
-        let content = data.content ? data.content.trim().replace(/<[^>]+>/g, '') : '';
-        if (CONFIG.localsearch.unescape) {
-          content = unescapeHtml(content);
-        }
-        let contentInLowerCase = content.toLowerCase();
-        let articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-        let indexOfTitle = [];
-        let indexOfContent = [];
-        keywords.forEach(keyword => {
-          indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-          indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+// 监听搜索(SW)
+var searchFuncSW = function(siteRoot) {
+    fetch(siteRoot + 'searchData.json')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(resData) {
+        var localSearchData = JSON.stringify(resData);
+        var datas = JSON.parse(localSearchData);
+        var input = document.getElementById("local-search-input");
+        if (!input) return;
+        var resultContent = document.getElementById("local-search-result");
+        input.addEventListener("input", function() {
+            printRs(this, datas, resultContent)
         });
-
-        // Show search results
-        if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-          let hitCount = indexOfTitle.length + indexOfContent.length;
-          // Sort index by position of keyword
-          [indexOfTitle, indexOfContent].forEach(index => {
-            index.sort((itemLeft, itemRight) => {
-              if (itemRight.position !== itemLeft.position) {
-                return itemRight.position - itemLeft.position;
-              }
-              return itemLeft.word.length - itemRight.word.length;
-            });
-          });
-
-          let slicesOfTitle = [];
-          if (indexOfTitle.length !== 0) {
-            let tmp = mergeIntoSlice(0, title.length, indexOfTitle, searchText);
-            searchTextCount += tmp.searchTextCountInSlice;
-            slicesOfTitle.push(tmp);
-          }
-
-          let slicesOfContent = [];
-          while (indexOfContent.length !== 0) {
-            let item = indexOfContent[indexOfContent.length - 1];
-            let position = item.position;
-            let word = item.word;
-            // Cut out 100 characters
-            let start = position - 20;
-            let end = position + 80;
-            if (start < 0) {
-              start = 0;
-            }
-            if (end < position + word.length) {
-              end = position + word.length;
-            }
-            if (end > content.length) {
-              end = content.length;
-            }
-            let tmp = mergeIntoSlice(start, end, indexOfContent, searchText);
-            searchTextCount += tmp.searchTextCountInSlice;
-            slicesOfContent.push(tmp);
-          }
-
-          // Sort slices in content by search text's count and hits' count
-          slicesOfContent.sort((sliceLeft, sliceRight) => {
-            if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-              return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-            } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-              return sliceRight.hits.length - sliceLeft.hits.length;
-            }
-            return sliceLeft.start - sliceRight.start;
-          });
-
-          // Select top N slices in content
-          let upperBound = parseInt(CONFIG.localsearch.top_n_per_article, 10);
-          if (upperBound >= 0) {
-            slicesOfContent = slicesOfContent.slice(0, upperBound);
-          }
-
-          let resultItem = '';
-
-          if (slicesOfTitle.length !== 0) {
-            resultItem += `<li><a href="${articleUrl}" class="search-result-title">${highlightKeyword(title, slicesOfTitle[0])}</a>`;
-          } else {
-            resultItem += `<li><a href="${articleUrl}" class="search-result-title">${title}</a>`;
-          }
-
-          slicesOfContent.forEach(slice => {
-            resultItem += `<a href="${articleUrl}"><p class="search-result">${highlightKeyword(content, slice)}...</p></a>`;
-          });
-
-          resultItem += '</li>';
-          resultItems.push({
-            item           : resultItem,
-            searchTextCount: searchTextCount,
-            hitCount       : hitCount,
-            id             : resultItems.length
-          });
-        }
-      });
-    }
-    if (keywords.length === 1 && keywords[0] === '') {
-      resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>';
-    } else if (resultItems.length === 0) {
-      resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>';
-    } else {
-      resultItems.sort((resultLeft, resultRight) => {
-        if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-          return resultRight.searchTextCount - resultLeft.searchTextCount;
-        } else if (resultLeft.hitCount !== resultRight.hitCount) {
-          return resultRight.hitCount - resultLeft.hitCount;
-        }
-        return resultRight.id - resultLeft.id;
-      });
-      let searchResultList = '<ul class="search-result-list">';
-      resultItems.forEach(result => {
-        searchResultList += result.item;
-      });
-      searchResultList += '</ul>';
-      resultContent.innerHTML = searchResultList;
-      window.pjax && window.pjax.refresh(resultContent);
-    }
-  };
-
-  const fetchData = callback => {
-    fetch(path)
-      .then(response => response.text())
-      .then(res => {
-        // Get the contents from search data
-        isfetched = true;
-        datas = isXml ? [...new DOMParser().parseFromString(res, 'text/xml').querySelectorAll('entry')].map(element => {
-          return {
-            title  : element.querySelector('title').innerHTML,
-            content: element.querySelector('content').innerHTML,
-            url    : element.querySelector('url').innerHTML
-          };
-        }) : JSON.parse(res);
-
-        // Remove loading animation
-        document.querySelector('.search-pop-overlay').innerHTML = '';
-        document.body.style.overflow = '';
-
-        if (callback) {
-          callback();
-        }
-      });
-  };
-
-  if (CONFIG.localsearch.preload) {
-    fetchData();
-  }
-
-  const proceedSearch = () => {
-    document.body.style.overflow = 'hidden';
-    document.querySelector('.search-pop-overlay').style.display = 'block';
-    document.querySelector('.popup').style.display = 'block';
-    document.getElementById('search-input').focus();
-  };
-
-  // Search function
-  const searchFunc = () => {
-    document.querySelector('.search-pop-overlay').style.display = '';
-    document.querySelector('.search-pop-overlay').innerHTML = '<div class="search-loading-icon"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div>';
-    fetchData(proceedSearch);
-  };
-
-  if (CONFIG.localsearch.trigger === 'auto') {
-    input.addEventListener('input', inputEventFunction);
-  } else {
-    document.querySelector('.search-icon').addEventListener('click', inputEventFunction);
-    input.addEventListener('keypress', event => {
-      if (event.keyCode === 13) {
-        inputEventFunction();
-      }
     });
-  }
+};
 
-  // Handle and trigger popup window
-  document.querySelector('.popup-trigger').addEventListener('click', () => {
-    if (isfetched === false) {
-      searchFunc();
-    } else {
-      proceedSearch();
+// 打印结果
+var printRs = function (input, datas, resultContent) {
+    var str = '<ul class="search-result-list">';
+    var keywords = input.value.trim().toLowerCase().split(/[\s\-]+/);
+    resultContent.innerHTML = "";
+    if (input.value.trim().length <= 0) {
+        return;
     }
-  });
-
-  // Monitor main search box
-  const onPopupClose = () => {
-    document.body.style.overflow = '';
-    document.querySelector('.search-pop-overlay').style.display = 'none';
-    document.querySelector('.popup').style.display = 'none';
-  };
-
-  document.querySelector('.search-pop-overlay').addEventListener('click', onPopupClose);
-  document.querySelector('.popup-btn-close').addEventListener('click', onPopupClose);
-  window.addEventListener('pjax:success', onPopupClose);
-  window.addEventListener('keyup', event => {
-    if (event.which === 27) {
-      onPopupClose();
-    }
-  });
-});
+    datas.forEach(function(data) {
+        var isMatch = true;
+        var content_index = [];
+        if (!data.title || data.title.trim() === "") {
+            data.title = "Untitled";
+        }
+        var data_title = data.title.trim().toLowerCase();
+        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+        var data_url = data.url;
+        var index_title = -1;
+        var index_content = -1;
+        var first_occur = -1;
+        if (data_content !== "") {
+            keywords.forEach(function(keyword, i) {
+                index_title = data_title.indexOf(keyword);
+                index_content = data_content.indexOf(keyword);
+                if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                } else {
+                    if (index_content < 0) {
+                        index_content = 0;
+                    }
+                    if (i == 0) {
+                        first_occur = index_content;
+                    }
+                }
+            });
+        } else {
+            isMatch = false;
+        }
+        if (isMatch) {
+            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+            var content = data.content.trim().replace(/<[^>]+>/g, "");
+            if (first_occur >= 0) {
+                var start = first_occur - 20;
+                var end = first_occur + 80;
+                if (start < 0) {
+                    start = 0;
+                }
+                if (start == 0) {
+                    end = 100;
+                }
+                if (end > content.length) {
+                    end = content.length;
+                }
+                var match_content = content.substr(start, end);
+                keywords.forEach(function(keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, '<em class="search-keyword">' + keyword + "</em>");
+                });
+                str += '<p class="search-result">' + match_content + "...</p>";
+            }
+            str += "</li>";
+        }
+    });
+    str += "</ul>";
+    resultContent.innerHTML = str;
+}
