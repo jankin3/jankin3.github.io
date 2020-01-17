@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/01/15/nginx/</loc>
+    
+    <lastmod>2020-01-17T09:51:46.171Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/01/12/year-summary-2019/</loc>
     
     <lastmod>2020-01-17T07:27:58.611Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://yoursite.com/2020/01/09/npm/</loc>
     
     <lastmod>2020-01-17T07:27:40.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/01/15/nginx/</loc>
-    
-    <lastmod>2020-01-17T07:27:36.279Z</lastmod>
     
   </url>
   

@@ -41,19 +41,21 @@
     <link href="http://yoursite.com/2020/01/15/nginx/"/>
     <id>http://yoursite.com/2020/01/15/nginx/</id>
     <published>2020-01-15T14:57:48.000Z</published>
-    <updated>2020-01-17T07:27:36.279Z</updated>
+    <updated>2020-01-17T09:51:46.171Z</updated>
     
     <content type="html"><![CDATA[<h1 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><h3 id="web-服务器-也可负载均衡，反向代理"><a href="#web-服务器-也可负载均衡，反向代理" class="headerlink" title="web 服务器(也可负载均衡，反向代理)"></a>web 服务器(也可负载均衡，反向代理)</h3><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><h3 id="采用异步事件驱动，可大量并行处理"><a href="#采用异步事件驱动，可大量并行处理" class="headerlink" title="采用异步事件驱动，可大量并行处理"></a>采用异步事件驱动，可大量并行处理</h3><a id="more"></a><ul><li><p>linux 采用epoll 模型</p><p>epoll模型基于事件驱动机制，它可以监控多个事件是否准备完毕，如果OK，那么放入epoll队列中，这个过程是异步的。worker只需要从epoll队列循环处理即可</p></li></ul><h3 id="模块化设计"><a href="#模块化设计" class="headerlink" title="模块化设计"></a>模块化设计</h3><ul><li>丰富的第三方模块</li></ul><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="配置语法"><a href="#配置语法" class="headerlink" title="配置语法"></a>配置语法</h3><ul><li><p>块配置 event,http, server</p></li><li><p>配置项</p><ul><li>格式: 多个值用空格隔开</li><li>单位：通用单位</li><li>变量：少数模块支持，同php</li></ul></li></ul><h3 id="location"><a href="#location" class="headerlink" title="location"></a>location</h3><p><a href="https://segmentfault.com/a/1190000013267839" target="_blank" rel="noopener">https://segmentfault.com/a/1190000013267839</a></p><ul><li><p>作用: 根据url匹配对应处理规则</p></li><li><p>语法规则</p><ul><li>location [ = | ~ | <del>* | ^</del> ] uri { … }<br>location @name { … }</li></ul></li><li><p>匹配规则</p><ul><li><p>前缀匹配</p><ul><li>= 表示精确匹配</li><li>^~ 表示如果该符号后面的字符是最佳匹配，采用该规则，不再进行后续的查找</li><li>字符串 会相互比较选择匹配度最高的, 一般配合PHP直接使用 location / 转换到php程序</li></ul></li><li><p>正则匹配</p><ul><li>~区分大小写</li><li>~* 不区分大小写</li></ul></li></ul></li></ul><h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><ul><li><p>debug 配置</p></li><li><p>正常运行的配置</p><ul><li>env|env=value定义环境变量 (没怎么用过)</li><li>include,嵌入其他配置, 便于模块化</li><li>pid: master 进程ID的pid文件存放路径</li><li>user username groupname, worker 进程运行的用户以及用户组</li><li>worker_rlimit_nofile limit, 可以打开的最大文件句柄数</li><li>worker_rlimit_sigpending limit, 限制信号队列</li></ul></li><li><p>优化性能配置</p><ul><li>worker_processes number,worker 进程个数</li><li>worker_cpu_affinity cpumask, 绑定worker 进程到cpu内核</li><li>ssl 硬件加速</li><li>系统调用gettimeofday 的评率</li><li>worker 进程优先级</li></ul></li><li><p>时间类配置项</p><ul><li>accept锁相关</li><li>lock 文件路径</li><li>批零建立新连接</li><li>选择时间模型</li><li>每个worker 的最大连接数</li></ul></li></ul><h3 id="配置分类"><a href="#配置分类" class="headerlink" title="配置分类"></a>配置分类</h3><ul><li>虚拟主机与请求的分发</li><li>文件路径的定义</li><li>内存以及磁盘的分配</li><li>网络连接的设置</li><li>MIME类型的设置</li><li>对客户端请求的限制</li><li>文件操作的优化</li><li>对客户端请求的特殊处理</li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;nginx&quot;&gt;&lt;a href=&quot;#nginx&quot; class=&quot;headerlink&quot; title=&quot;nginx&quot;&gt;&lt;/a&gt;nginx&lt;/h1&gt;&lt;h2 id=&quot;是什么？&quot;&gt;&lt;a href=&quot;#是什么？&quot; class=&quot;headerlink&quot; title=&quot;是什么？&quot;&gt;&lt;/a&gt;是什么？&lt;/h2&gt;&lt;h3 id=&quot;web-服务器-也可负载均衡，反向代理&quot;&gt;&lt;a href=&quot;#web-服务器-也可负载均衡，反向代理&quot; class=&quot;headerlink&quot; title=&quot;web 服务器(也可负载均衡，反向代理)&quot;&gt;&lt;/a&gt;web 服务器(也可负载均衡，反向代理)&lt;/h3&gt;&lt;h2 id=&quot;特点&quot;&gt;&lt;a href=&quot;#特点&quot; class=&quot;headerlink&quot; title=&quot;特点&quot;&gt;&lt;/a&gt;特点&lt;/h2&gt;&lt;h3 id=&quot;采用异步事件驱动，可大量并行处理&quot;&gt;&lt;a href=&quot;#采用异步事件驱动，可大量并行处理&quot; class=&quot;headerlink&quot; title=&quot;采用异步事件驱动，可大量并行处理&quot;&gt;&lt;/a&gt;采用异步事件驱动，可大量并行处理&lt;/h3&gt;
+      nginx 初步了解
     
     </summary>
     
     
     
       <category term="nginx" scheme="http://yoursite.com/tags/nginx/"/>
+    
+      <category term="web服务器" scheme="http://yoursite.com/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
