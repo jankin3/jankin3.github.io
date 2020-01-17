@@ -46,15 +46,15 @@
   };
 </script>
 
-  <meta name="description" content="mysql 锁机制https:&#x2F;&#x2F;learnku.com&#x2F;articles&#x2F;28772#c812c1 锁机制 作用：解决并发访问所处的处置：一般,表锁在mysql server层，行锁在索引层锁分类锁粒度 表锁  行锁  实现方式：索引加锁   页锁   兼容性 写锁  for update. 比读锁有更高的优先级   读锁  lock in share mode, 普通select innodb">
+  <meta name="description" content="mysql 锁机制https:&#x2F;&#x2F;learnku.com&#x2F;articles&#x2F;28772#c812c1 锁机制 作用：解决并发访问所处的处置：一般,表锁在mysql server层，行锁在索引层">
 <meta name="keywords" content="mysql,lock">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql-lock">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;mysql-lock&#x2F;index.html">
 <meta property="og:site_name" content="王juju">
-<meta property="og:description" content="mysql 锁机制https:&#x2F;&#x2F;learnku.com&#x2F;articles&#x2F;28772#c812c1 锁机制 作用：解决并发访问所处的处置：一般,表锁在mysql server层，行锁在索引层锁分类锁粒度 表锁  行锁  实现方式：索引加锁   页锁   兼容性 写锁  for update. 比读锁有更高的优先级   读锁  lock in share mode, 普通select innodb">
+<meta property="og:description" content="mysql 锁机制https:&#x2F;&#x2F;learnku.com&#x2F;articles&#x2F;28772#c812c1 锁机制 作用：解决并发访问所处的处置：一般,表锁在mysql server层，行锁在索引层">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-09T16:14:33.391Z">
+<meta property="og:updated_time" content="2020-01-17T07:27:36.275Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/12/09/mysql-lock/">
@@ -205,7 +205,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-10 00:14:33" itemprop="dateModified" datetime="2019-12-10T00:14:33+08:00">2019-12-10</time>
+                <time title="Modified: 2020-01-17 15:27:36" itemprop="dateModified" datetime="2020-01-17T15:27:36+08:00">2020-01-17</time>
               </span>
 
           
@@ -220,7 +220,8 @@
 
       
         <h1 id="mysql-锁机制"><a href="#mysql-锁机制" class="headerlink" title="mysql 锁机制"></a>mysql 锁机制</h1><p><a href="https://learnku.com/articles/28772#c812c1" target="_blank" rel="noopener">https://learnku.com/articles/28772#c812c1</a> 锁机制</p>
-<h2 id="作用：解决并发访问"><a href="#作用：解决并发访问" class="headerlink" title="作用：解决并发访问"></a>作用：解决并发访问</h2><h2 id="所处的处置：一般-表锁在mysql-server层，行锁在索引层"><a href="#所处的处置：一般-表锁在mysql-server层，行锁在索引层" class="headerlink" title="所处的处置：一般,表锁在mysql server层，行锁在索引层"></a>所处的处置：一般,表锁在mysql server层，行锁在索引层</h2><h2 id="锁分类"><a href="#锁分类" class="headerlink" title="锁分类"></a>锁分类</h2><h3 id="锁粒度"><a href="#锁粒度" class="headerlink" title="锁粒度"></a>锁粒度</h3><ul>
+<h2 id="作用：解决并发访问"><a href="#作用：解决并发访问" class="headerlink" title="作用：解决并发访问"></a>作用：解决并发访问</h2><h2 id="所处的处置：一般-表锁在mysql-server层，行锁在索引层"><a href="#所处的处置：一般-表锁在mysql-server层，行锁在索引层" class="headerlink" title="所处的处置：一般,表锁在mysql server层，行锁在索引层"></a>所处的处置：一般,表锁在mysql server层，行锁在索引层</h2><a id="more"></a>
+<h2 id="锁分类"><a href="#锁分类" class="headerlink" title="锁分类"></a>锁分类</h2><h3 id="锁粒度"><a href="#锁粒度" class="headerlink" title="锁粒度"></a>锁粒度</h3><ul>
 <li><p>表锁</p>
 </li>
 <li><p>行锁</p>

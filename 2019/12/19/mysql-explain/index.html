@@ -46,15 +46,15 @@
   };
 </script>
 
-  <meta name="description" content="mysql explain作用：sql查询如何执行，近似结果特点相关explain extendexplain partitions主要行解释id 编号， 标识select 所属行，id越大越先执行，id相同顺序执行   select type 显示对应行是简单还是复杂查询  type(访问类型) NULL  const、system  eq_ref  ref  range  index  全表扫">
+  <meta name="description" content="mysql explain作用：sql查询如何执行，近似结果特点相关">
 <meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql-explain">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;19&#x2F;mysql-explain&#x2F;index.html">
 <meta property="og:site_name" content="王juju">
-<meta property="og:description" content="mysql explain作用：sql查询如何执行，近似结果特点相关explain extendexplain partitions主要行解释id 编号， 标识select 所属行，id越大越先执行，id相同顺序执行   select type 显示对应行是简单还是复杂查询  type(访问类型) NULL  const、system  eq_ref  ref  range  index  全表扫">
+<meta property="og:description" content="mysql explain作用：sql查询如何执行，近似结果特点相关">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-19T15:05:38.627Z">
+<meta property="og:updated_time" content="2020-01-17T07:27:29.300Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/12/19/mysql-explain/">
@@ -197,10 +197,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2019-12-19 23:04:57 / Modified: 23:05:38" itemprop="dateCreated datePublished" datetime="2019-12-19T23:04:57+08:00">2019-12-19</time>
+              <time title="Created: 2019-12-19 23:04:57" itemprop="dateCreated datePublished" datetime="2019-12-19T23:04:57+08:00">2019-12-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-17 15:27:29" itemprop="dateModified" datetime="2020-01-17T15:27:29+08:00">2020-01-17</time>
+              </span>
 
           
 
@@ -213,7 +219,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="mysql-explain"><a href="#mysql-explain" class="headerlink" title="mysql explain"></a>mysql explain</h1><h2 id="作用：sql查询如何执行，近似结果"><a href="#作用：sql查询如何执行，近似结果" class="headerlink" title="作用：sql查询如何执行，近似结果"></a>作用：sql查询如何执行，近似结果</h2><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><h3 id="explain-extend"><a href="#explain-extend" class="headerlink" title="explain extend"></a>explain extend</h3><h3 id="explain-partitions"><a href="#explain-partitions" class="headerlink" title="explain partitions"></a>explain partitions</h3><h2 id="主要行解释"><a href="#主要行解释" class="headerlink" title="主要行解释"></a>主要行解释</h2><h3 id="id"><a href="#id" class="headerlink" title="id"></a>id</h3><ul>
+        <h1 id="mysql-explain"><a href="#mysql-explain" class="headerlink" title="mysql explain"></a>mysql explain</h1><h2 id="作用：sql查询如何执行，近似结果"><a href="#作用：sql查询如何执行，近似结果" class="headerlink" title="作用：sql查询如何执行，近似结果"></a>作用：sql查询如何执行，近似结果</h2><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><a id="more"></a>
+<h3 id="explain-extend"><a href="#explain-extend" class="headerlink" title="explain extend"></a>explain extend</h3><h3 id="explain-partitions"><a href="#explain-partitions" class="headerlink" title="explain partitions"></a>explain partitions</h3><h2 id="主要行解释"><a href="#主要行解释" class="headerlink" title="主要行解释"></a>主要行解释</h2><h3 id="id"><a href="#id" class="headerlink" title="id"></a>id</h3><ul>
 <li><p>编号，</p>
 <p>标识select 所属行，id越大越先执行，id相同顺序执行</p>
 </li>

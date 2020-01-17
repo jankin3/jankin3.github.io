@@ -46,15 +46,15 @@
   };
 </script>
 
-  <meta name="description" content="零宽断言接下来的四个用于查找在某些内容(但并不包括这些内容)之前或之后的东西，也就是说它们像\b,^,$那样用于指定一个位置，这个位置应该满足一定的条件(即断言)，因此它们也被称为零宽断言。最好还是拿例子来说明吧： 断言用来声明一个应该为真的事实。正则表达式中只有当断言为真时才会继续进行匹配。(?=exp)也叫零宽度正预测先行断言，它断言自身出现的位置的后面能匹配表达式exp。比如\b\w+(?=">
+  <meta name="description" content="零宽断言接下来的四个用于查找在某些内容(但并不包括这些内容)之前或之后的东西，也就是说它们像\b,^,$那样用于指定一个位置，这个位置应该满足一定的条件(即断言)，因此它们也被称为零宽断言。最好还是拿例子来说明吧：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="regular-expression-note">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;17&#x2F;regular-expression-note&#x2F;index.html">
 <meta property="og:site_name" content="王juju">
-<meta property="og:description" content="零宽断言接下来的四个用于查找在某些内容(但并不包括这些内容)之前或之后的东西，也就是说它们像\b,^,$那样用于指定一个位置，这个位置应该满足一定的条件(即断言)，因此它们也被称为零宽断言。最好还是拿例子来说明吧： 断言用来声明一个应该为真的事实。正则表达式中只有当断言为真时才会继续进行匹配。(?=exp)也叫零宽度正预测先行断言，它断言自身出现的位置的后面能匹配表达式exp。比如\b\w+(?=">
+<meta property="og:description" content="零宽断言接下来的四个用于查找在某些内容(但并不包括这些内容)之前或之后的东西，也就是说它们像\b,^,$那样用于指定一个位置，这个位置应该满足一定的条件(即断言)，因此它们也被称为零宽断言。最好还是拿例子来说明吧：">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="evernotecid:&#x2F;&#x2F;A7FC8235-39E4-4893-9D89-39960F38D08F&#x2F;wwwevernotecom&#x2F;187238225&#x2F;ENResource&#x2F;p138">
-<meta property="og:updated_time" content="2019-11-17T15:30:44.364Z">
+<meta property="og:updated_time" content="2020-01-17T07:27:45.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="evernotecid:&#x2F;&#x2F;A7FC8235-39E4-4893-9D89-39960F38D08F&#x2F;wwwevernotecom&#x2F;187238225&#x2F;ENResource&#x2F;p138">
 
@@ -198,10 +198,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2019-11-17 23:30:14 / Modified: 23:30:44" itemprop="dateCreated datePublished" datetime="2019-11-17T23:30:14+08:00">2019-11-17</time>
+              <time title="Created: 2019-11-17 23:30:14" itemprop="dateCreated datePublished" datetime="2019-11-17T23:30:14+08:00">2019-11-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-17 15:27:45" itemprop="dateModified" datetime="2020-01-17T15:27:45+08:00">2020-01-17</time>
+              </span>
 
           
 
@@ -215,6 +221,7 @@
 
       
         <h4 id="零宽断言"><a href="#零宽断言" class="headerlink" title="零宽断言"></a>零宽断言</h4><p>接下来的四个用于查找在某些内容(但并不包括这些内容)之前或之后的东西，也就是说它们像\b,^,$那样用于指定一个位置，这个位置应该满足一定的条件(即断言)，因此它们也被称为零宽断言。最好还是拿例子来说明吧：</p>
+<a id="more"></a>
 <p>断言用来声明一个应该为真的事实。正则表达式中只有当断言为真时才会继续进行匹配。<br>(?=exp)也叫零宽度正预测先行断言，它断言自身出现的位置的后面能匹配表达式exp。比如\b\w+(?=ing\b)，匹配以ing结尾的单词的前面部分(除了ing以外的部分)，如查找I’m singing while you’re dancing.时，它会匹配sing和danc。</p>
 <p>(?&lt;=exp)也叫零宽度正回顾后发断言，它断言自身出现的位置的前面能匹配表达式exp。比如(?&lt;=\bre)\w+\b会匹配以re开头的单词的后半部分(除了re以外的部分)，例如在查找reading a book时，它匹配ading。</p>
 <p>假如你想要给一个很长的数字中每三位间加一个逗号(当然是从右边加起了)，你可以这样查找需要在前面和里面添加逗号的部分：((?&lt;=\d)\d{3})+\b，用它对1234567890进行查找时结果是234567890。</p>

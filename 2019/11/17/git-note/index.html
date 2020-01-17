@@ -46,14 +46,14 @@
   };
 </script>
 
-  <meta name="description" content="本地多个 remote 配置（同步推送到线上服务器） 远程 git库初始化，并配置12git initgit config receive.denyCurrentBranch updateInstead 本地添加远程地址1git remote add productionServer ssh:&#x2F;&#x2F;ubuntu@xxx.xxx.xxx.xxx&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;git_dir    G">
+  <meta name="description" content="本地多个 remote 配置（同步推送到线上服务器） 远程 git库初始化，并配置12git initgit config receive.denyCurrentBranch updateInstead 本地添加远程地址1git remote add productionServer ssh:&#x2F;&#x2F;ubuntu@xxx.xxx.xxx.xxx&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;git_dir">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git note">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;17&#x2F;git-note&#x2F;index.html">
 <meta property="og:site_name" content="王juju">
-<meta property="og:description" content="本地多个 remote 配置（同步推送到线上服务器） 远程 git库初始化，并配置12git initgit config receive.denyCurrentBranch updateInstead 本地添加远程地址1git remote add productionServer ssh:&#x2F;&#x2F;ubuntu@xxx.xxx.xxx.xxx&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;git_dir    G">
+<meta property="og:description" content="本地多个 remote 配置（同步推送到线上服务器） 远程 git库初始化，并配置12git initgit config receive.denyCurrentBranch updateInstead 本地添加远程地址1git remote add productionServer ssh:&#x2F;&#x2F;ubuntu@xxx.xxx.xxx.xxx&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;git_dir">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-17T10:18:06.252Z">
+<meta property="og:updated_time" content="2020-01-17T07:26:56.751Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/17/git-note/">
@@ -196,10 +196,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2019-11-17 18:11:23 / Modified: 18:18:06" itemprop="dateCreated datePublished" datetime="2019-11-17T18:11:23+08:00">2019-11-17</time>
+              <time title="Created: 2019-11-17 18:11:23" itemprop="dateCreated datePublished" datetime="2019-11-17T18:11:23+08:00">2019-11-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-17 15:26:56" itemprop="dateModified" datetime="2020-01-17T15:26:56+08:00">2020-01-17</time>
+              </span>
 
           
 
@@ -215,10 +221,9 @@
         <h4 id="本地多个-remote-配置（同步推送到线上服务器）"><a href="#本地多个-remote-配置（同步推送到线上服务器）" class="headerlink" title="本地多个 remote 配置（同步推送到线上服务器）"></a>本地多个 remote 配置（同步推送到线上服务器）</h4><ol>
 <li>远程 git库初始化，并配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git config receive.denyCurrentBranch updateInstead</span><br></pre></td></tr></table></figure></li>
 <li>本地添加远程地址<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add productionServer ssh://ubuntu@xxx.xxx.xxx.xxx/usr/share/nginx/git_dir</span><br></pre></td></tr></table></figure>
-
-</li>
+<a id="more"></a>
+<h4 id="Git-Config中receive-denyCurrentBranch做了什么"><a href="#Git-Config中receive-denyCurrentBranch做了什么" class="headerlink" title="Git Config中receive.denyCurrentBranch做了什么?"></a>Git Config中receive.denyCurrentBranch做了什么?</h4>这个config是决定 当你Push到一个非bare的远程库的正处于切换状态下分支时的行为。</li>
 </ol>
-<h4 id="Git-Config中receive-denyCurrentBranch做了什么"><a href="#Git-Config中receive-denyCurrentBranch做了什么" class="headerlink" title="Git Config中receive.denyCurrentBranch做了什么?"></a>Git Config中receive.denyCurrentBranch做了什么?</h4><p>这个config是决定 当你Push到一个非bare的远程库的正处于切换状态下分支时的行为。</p>
 <p>设置为true或refuse时，会拒绝你的push并且发出几行警告消息<br>设置为warn时，会接受你的push并且发出几行警告消息<br>设置为false或ignore时会接受你的push且不发出警告</p>
 <p>后两种虽然接受了push,但并没有直接反映在工作目录(working tree)上，你需要输入git reset –hard, 或者切换到其他分支再切换回来，才能刷新文件</p>
 <p>设置为updateInstead时，会接受push并直接更新工作目录,但如果工作目录相对HEAD指针有更新，则会拒绝push</p>
@@ -260,9 +265,6 @@
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/17/hello-world/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
-                </a>
             </div>
 
             <span class="post-nav-divider"></span>
