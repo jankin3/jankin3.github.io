@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-19T07:05:38.739Z</updated>
+  <updated>2020-01-19T08:57:08.125Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>http-client-cache</title>
+    <link href="http://yoursite.com/2020/01/19/http-client-cache/"/>
+    <id>http://yoursite.com/2020/01/19/http-client-cache/</id>
+    <published>2020-01-19T08:48:57.000Z</published>
+    <updated>2020-01-19T08:57:08.125Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://q4b6m25wx.bkt.clouddn.com/xmind/http-client-cache.png" alt="avatar"></p><h1 id="http-缓存"><a href="#http-缓存" class="headerlink" title="http 缓存"></a>http 缓存</h1><p>参考:<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn" target="_blank" rel="noopener">https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn</a></p><h2 id="作用-网络提取内容开销大，客户端直接缓存数据"><a href="#作用-网络提取内容开销大，客户端直接缓存数据" class="headerlink" title="作用:  网络提取内容开销大，客户端直接缓存数据"></a>作用:  网络提取内容开销大，客户端直接缓存数据</h2><h2 id="问题：如何兼顾客户端缓存和快速更新"><a href="#问题：如何兼顾客户端缓存和快速更新" class="headerlink" title="问题：如何兼顾客户端缓存和快速更新"></a>问题：如何兼顾客户端缓存和快速更新</h2><h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><a id="more"></a><h3 id="http-header"><a href="#http-header" class="headerlink" title="http header"></a>http header</h3><ul><li><p>ETag: 验证令牌,资源未发生变化时不会传送任何数据</p></li><li><p>Cache-Control</p><ul><li><p>概览：定义其缓存策略,也就是如何缓存各个响应以及缓存多久</p></li><li><p>详细配置</p><ul><li>“no-cache”和“no-store”</li><li>“public”与 “private”</li><li>“max-age”</li></ul></li></ul></li></ul><h3 id="实际设计"><a href="#实际设计" class="headerlink" title="实际设计:"></a>实际设计:</h3><ul><li>HTML: 被标记为“no-cache”，这意味着浏览器在每次请求时都始终会重新验证文档，并在内容变化时提取最新版本</li><li>JavaScript 可以设置较长的缓存，因为添加 了版本指纹可以随时更新。</li><li>image:图像缓存时不包含版本或唯一指纹，并设置为 1 天后到期。</li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
+    
+    <summary type="html">
+    
+      http客户端浏览器header缓存
+    
+    </summary>
+    
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+      <category term="cache" scheme="http://yoursite.com/tags/cache/"/>
+    
+  </entry>
   
   <entry>
     <title>nginx</title>
