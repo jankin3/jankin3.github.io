@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-19T08:57:08.125Z</updated>
+  <updated>2020-01-21T07:07:42.956Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux-filesystem</title>
+    <link href="http://yoursite.com/2020/01/21/linux-filesystem/"/>
+    <id>http://yoursite.com/2020/01/21/linux-filesystem/</id>
+    <published>2020-01-21T06:56:32.000Z</published>
+    <updated>2020-01-21T07:07:42.956Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://q4b6m25wx.bkt.clouddn.com/xmind/linux-filesystem.png" alt="avatar"></p><h1 id="linux文件系统"><a href="#linux文件系统" class="headerlink" title="linux文件系统"></a>linux文件系统</h1><h2 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h2><h3 id="设计思想"><a href="#设计思想" class="headerlink" title="设计思想"></a>设计思想</h3><ul><li>索引式文件系统. 读取文件的时候读取inode中的block 位置之后可以一口气直接找到所有的block。这里对比U盘的FAT系统需要一个个读取，因为每个block 文件里面记录着下一个block的位置，相比而言会比较慢</li></ul><h3 id="主要部分"><a href="#主要部分" class="headerlink" title="主要部分"></a>主要部分</h3><ul><li>boot sector, superblock, inode bitmap, block bitmap, inode table, data block</li></ul><h3 id="文件-系统主要信息"><a href="#文件-系统主要信息" class="headerlink" title="文件 系统主要信息"></a>文件 系统主要信息</h3><ul><li><code>superblock</code>, 记录整个文件系统的整体信息</li><li><code>inode</code>, 文件的权限与属性,一个文件占用一个inode, 以及block 的位置</li><li><code>block</code>, 数据区块, 记录文件的实际存储数据</li></ul><h2 id="目录树"><a href="#目录树" class="headerlink" title="目录树"></a>目录树</h2><h3 id="目录和文件类似，每个目录都有一个inode-和block-inode记录的目录的属性和权限，block记录的是目录下的文件名以及文件的inode"><a href="#目录和文件类似，每个目录都有一个inode-和block-inode记录的目录的属性和权限，block记录的是目录下的文件名以及文件的inode" class="headerlink" title="目录和文件类似，每个目录都有一个inode 和block, inode记录的目录的属性和权限，block记录的是目录下的文件名以及文件的inode"></a>目录和文件类似，每个目录都有一个inode 和block, inode记录的目录的属性和权限，block记录的是目录下的文件名以及文件的inode</h3><h2 id="日志式文件系统"><a href="#日志式文件系统" class="headerlink" title="日志式文件系统"></a>日志式文件系统</h2><h3 id="目的-数据一致性检查"><a href="#目的-数据一致性检查" class="headerlink" title="目的:数据一致性检查"></a>目的:数据一致性检查</h3><h3 id="实现-多出一块记录区，随时记载文件系统的主要活动，可加快系统复原时间；"><a href="#实现-多出一块记录区，随时记载文件系统的主要活动，可加快系统复原时间；" class="headerlink" title="实现:多出一块记录区，随时记载文件系统的主要活动，可加快系统复原时间；"></a>实现:多出一块记录区，随时记载文件系统的主要活动，可加快系统复原时间；</h3><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="df"><a href="#df" class="headerlink" title="df"></a>df</h3><ul><li><p>目的:列出文件系统的整体磁盘使用量</p></li><li><p>常用</p><ul><li>-h 显示各文件系统的容量</li><li>-i -h 显示各文件系统inode使用情况</li></ul></li></ul><h3 id="du"><a href="#du" class="headerlink" title="du"></a>du</h3><ul><li>评估文件系统的磁盘使用量</li><li>du -h –max-depth=1 计算当前目录下的文件或者目录的大小，包括子目录</li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
+    
+    <summary type="html">
+    
+      linux文件系统
+    
+    </summary>
+    
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>http-client-cache</title>
@@ -89,7 +110,7 @@
     <link href="http://yoursite.com/2020/01/12/year-summary-2019/"/>
     <id>http://yoursite.com/2020/01/12/year-summary-2019/</id>
     <published>2020-01-12T14:14:38.000Z</published>
-    <updated>2020-01-17T07:27:58.611Z</updated>
+    <updated>2020-01-21T07:12:33.841Z</updated>
     
     <content type="html"><![CDATA[<h1 id="爱-成长，责任，压力-–2019年总结"><a href="#爱-成长，责任，压力-–2019年总结" class="headerlink" title="爱, 成长，责任，压力  –2019年总结"></a>爱, 成长，责任，压力  –2019年总结</h1><a id="more"></a>]]></content>
     

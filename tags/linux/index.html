@@ -144,6 +144,60 @@
 	<div class="inner">
 		<div class="post-feed">
 			
+			<article class="post-card post ">
+				
+				<a class="post-card-image-link" title="linux-filesystem" href="/2020/01/21/linux-filesystem/">
+					<div class="post-card-image b-lazy" data-src="https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"></div>
+				</a>
+				
+				<div class="post-card-content">
+					<a class="post-card-content-link" title="linux-filesystem" href="/2020/01/21/linux-filesystem/">
+						<header class="post-card-header">
+							<span class="post-card-tags">
+								
+								| 
+								
+								<time datetime="2020-01-21T06:56:32.000Z">
+									2020-01-21
+								</time>
+							</span>
+							<h2 class="post-card-title">linux-filesystem</h2>
+						</header>
+						<div class="post-card-excerpt">
+							<p>
+								
+								
+								
+								
+								
+								
+								
+								
+linux文件系统文件属性设计思想
+索引式文件系统. 读取文件的时候读取inode中的block 位置之后可以一口气直接找到所有的block。这里对比U盘的F
+								...
+							</p>
+						</div>
+					</a>
+					<footer class="post-card-meta">
+						<div class="author-list">
+							<div class="author-list-item">
+								<div class="author-name-tooltip">Jankin</div>
+								
+								<a href="/about" class="static-avatar author-profile-image">
+									<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+								</a>
+								
+							</div>
+						</div>
+						<span class="reading-time">
+							1
+							min read
+						</span>
+					</footer>
+				</div>
+			</article>
+			
 			<article class="post-card post  no-image ">
 				
 				<div class="post-card-content">
@@ -168,10 +222,28 @@
 								
 								
 								
-								
-								
 								linux 文件权限文件权限：每个文件可以针对每个用户具有不同的权限用户和用户组为什么要有这么细致的分级？
-安全防护，因为linux多用户，多任务的环境。每个用
+安全防护，因为linux多用户，多任务的环境。每个用户的权限隐私很重要
+
+文件用户身份
+own/group/other
+
+权限等级与意义
+read
+
+对文件: 读取文件
+对目录:读取该目录结构
+
+
+write
+
+对文件: 包括编辑新增等，但是不包括删除, 那么怎么才能删除文件呢？
+对目录:更改目录结构的，包括增删改，注意删除的权限在这里
+
+
+execute
+
+对文件:可
 								...
 							</p>
 						</div>
@@ -235,6 +307,12 @@
       
       
       <li>
+        <a href="/2020/01/21/linux-filesystem/">linux-filesystem</a>
+      </li>
+      
+      
+      
+      <li>
         <a href="/2020/01/19/http-client-cache/">http-client-cache</a>
       </li>
       
@@ -245,10 +323,6 @@
       </li>
       
       
-      
-      <li>
-        <a href="/2020/01/13/http/">http</a>
-      </li>
       
       
       
@@ -294,7 +368,7 @@
 		<h3 class="read-next-card-header-title">Tag Cloud</h3>
 	</header>
 	<div class="read-next-card-content-ext">
-		<a href="/tags/cache/" style="font-size: 14px;">cache</a> <a href="/tags/http/" style="font-size: 14px;">http</a> <a href="/tags/linux/" style="font-size: 14px;">linux</a> <a href="/tags/lock/" style="font-size: 14px;">lock</a> <a href="/tags/mysql/" style="font-size: 24px;">mysql</a> <a href="/tags/nginx/" style="font-size: 14px;">nginx</a> <a href="/tags/shell/" style="font-size: 14px;">shell</a> <a href="/tags/summary/" style="font-size: 14px;">summary</a> <a href="/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px;">web服务器</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/" style="font-size: 14px;">网络协议</a>
+		<a href="/tags/cache/" style="font-size: 14px;">cache</a> <a href="/tags/http/" style="font-size: 14px;">http</a> <a href="/tags/linux/" style="font-size: 24px;">linux</a> <a href="/tags/lock/" style="font-size: 14px;">lock</a> <a href="/tags/mysql/" style="font-size: 24px;">mysql</a> <a href="/tags/nginx/" style="font-size: 14px;">nginx</a> <a href="/tags/shell/" style="font-size: 14px;">shell</a> <a href="/tags/summary/" style="font-size: 14px;">summary</a> <a href="/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px;">web服务器</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/" style="font-size: 14px;">网络协议</a>
 	</div>
 </article>
 
