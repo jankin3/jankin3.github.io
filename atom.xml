@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-21T09:06:58.408Z</updated>
+  <updated>2020-01-29T14:32:32.509Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mind-mapping</title>
+    <link href="http://yoursite.com/2020/01/29/mind-mapping/"/>
+    <id>http://yoursite.com/2020/01/29/mind-mapping/</id>
+    <published>2020-01-29T14:26:29.000Z</published>
+    <updated>2020-01-29T14:32:32.509Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://q4b6m25wx.bkt.clouddn.com/xmind/mind-mapping.png" alt="avatar"></p><h1 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="他是什么"><a href="#他是什么" class="headerlink" title="他是什么"></a>他是什么</h3><ul><li>输入是繁杂的关系，输出是知识网络</li></ul><h3 id="他的目的"><a href="#他的目的" class="headerlink" title="他的目的"></a>他的目的</h3><ul><li>归纳精简知识</li><li>拆分知识</li><li>避免学习误区，达到学习的原则</li></ul><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ul><li>学习知识</li></ul><h3 id="使用原则：满足学习原则的要求，而不是盲目信仰"><a href="#使用原则：满足学习原则的要求，而不是盲目信仰" class="headerlink" title="使用原则：满足学习原则的要求，而不是盲目信仰"></a>使用原则：满足学习原则的要求，而不是盲目信仰</h3><h3 id="使用步骤："><a href="#使用步骤：" class="headerlink" title="使用步骤："></a>使用步骤：</h3><ul><li><p>收集例子</p></li><li><p>自我思考</p><ul><li><p>一阶知识</p><ul><li><p>分类</p><ul><li>它是什么</li><li>为什么是</li></ul></li><li><p>回归</p><ul><li>他的目的</li><li>如何达到</li></ul></li></ul></li><li><p>二阶知识</p><ul><li><p>组合关系</p><ul><li>它有什么</li></ul></li><li><p>执行步骤</p><ul><li>如何达到</li></ul></li></ul></li></ul></li></ul><h3 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h3><h3 id="使用误区"><a href="#使用误区" class="headerlink" title="使用误区"></a>使用误区</h3><ul><li>是用来整理的，不是拿来记忆的</li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
+    
+    <summary type="html">
+    
+      思维导图
+    
+    </summary>
+    
+    
+    
+      <category term="tool" scheme="http://yoursite.com/tags/tool/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>study-understand</title>
+    <link href="http://yoursite.com/2020/01/29/study-understand/"/>
+    <id>http://yoursite.com/2020/01/29/study-understand/</id>
+    <published>2020-01-29T14:13:32.000Z</published>
+    <updated>2020-01-29T14:25:47.228Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://q4b6m25wx.bkt.clouddn.com/xmind/study-understand.png" alt="avatar"></p><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><h2 id="它是什么？"><a href="#它是什么？" class="headerlink" title="它是什么？"></a>它是什么？</h2><a id="more"></a><h3 id="从有限的问题和答案中找出规律的过程。"><a href="#从有限的问题和答案中找出规律的过程。" class="headerlink" title="从有限的问题和答案中找出规律的过程。"></a>从有限的问题和答案中找出规律的过程。</h3><h2 id="它的目的？"><a href="#它的目的？" class="headerlink" title="它的目的？"></a>它的目的？</h2><h3 id="解决未知情况。"><a href="#解决未知情况。" class="headerlink" title="解决未知情况。"></a>解决未知情况。</h3><h2 id="如何学习？"><a href="#如何学习？" class="headerlink" title="如何学习？"></a>如何学习？</h2><h3 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h3><ul><li>明确输入输出</li><li>将信息压缩成知识</li><li>用例子重塑大脑连接</li><li>二阶知识拆分知识</li></ul><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ul><li><p>搞清楚输入输出</p><p>先搞清楚什么是问题和答案?而不是简单的知识描述.<br>这一点深有体会，当读书的时候，比如《高性能mysql》，看第一遍的时候只是觉得卧槽这个设计牛皮？其实我只是看了一遍知识的描述。实际的知识并没有学会多少。我的问题是什么？我为什么要看这本书？我希望收获什么？这个设计的原因是什么？解决了什么问题？没有解决什么问题？什么情况下使用？这些问题是我需要注意的地方</p></li><li><p>通过大量的已知例子去归纳总结知识</p></li><li><p>验证知识的正确性</p></li></ul><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul><li>思维 导图</li></ul><h2 id="学习的误区"><a href="#学习的误区" class="headerlink" title="学习的误区?"></a>学习的误区?</h2><h3 id="一般-错误-的学习方法"><a href="#一般-错误-的学习方法" class="headerlink" title="一般(错误)的学习方法:"></a>一般(错误)的学习方法:</h3><ul><li><ol><li>阅读知识的描述</li></ol></li><li><ol start="2"><li>理解描述的含义</li></ol></li><li><ol start="3"><li>反复描述希望记住</li></ol></li></ul><h3 id="误区"><a href="#误区" class="headerlink" title="误区"></a>误区</h3><ul><li>不搞清楚输入输出</li><li>学习方式错误，比如光靠记忆</li><li>不使用例子学习</li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
+    
+    <summary type="html">
+    
+      study
+    
+    </summary>
+    
+    
+    
+      <category term="study" scheme="http://yoursite.com/tags/study/"/>
+    
+  </entry>
   
   <entry>
     <title>annual-year-2019</title>
