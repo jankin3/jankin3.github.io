@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-31T11:30:01.244Z</updated>
+  <updated>2020-02-01T16:19:14.423Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>algorithm--dynamic-programming</title>
+    <link href="http://yoursite.com/2020/02/02/algorithm-dynamic-programming/"/>
+    <id>http://yoursite.com/2020/02/02/algorithm-dynamic-programming/</id>
+    <published>2020-02-01T16:08:05.000Z</published>
+    <updated>2020-02-01T16:19:14.423Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://q4b6m25wx.bkt.clouddn.com/xmind/algorithm--dynamic-programming.png" alt="avatar"></p><h1 id="算法-动态规划"><a href="#算法-动态规划" class="headerlink" title="算法-动态规划"></a>算法-动态规划</h1><p>Those who cannot remember the past are condemned to repeat it.</p><h2 id="它是什么"><a href="#它是什么" class="headerlink" title="它是什么?"></a>它是什么?</h2><h3 id="Dynamic-programming，简称DP。通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。"><a href="#Dynamic-programming，简称DP。通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。" class="headerlink" title="Dynamic programming，简称DP。通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。"></a>Dynamic programming，简称DP。通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。</h3><h3 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h3><ul><li>记住已经求过的子问题的解</li></ul><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="经典问题"><a href="#经典问题" class="headerlink" title="经典问题"></a>经典问题</h3><ul><li><p>爬楼梯问题</p></li><li><p>01背包问题</p><ul><li>问题描述，给定一组n个物品，每种物品都有自己的重量w和价值v，在限定的总重量/总容量内，选择其中若干个（也即每种物品可以选0个或1个），设计选择方案使得物品的总价值最高</li><li>思考:其他方式不可以么？比如，性价比计算，只拿贵的？答案，不行，只拿按照单个物品性价比高的情况下怎么使空间全部占满？所以总体计算下来单个性价比最高不一定等于总体性价比最高</li></ul></li></ul><h3 id="做过的算法题目"><a href="#做过的算法题目" class="headerlink" title="做过的算法题目"></a>做过的算法题目</h3><ul><li><p>解码方法问题</p><p><a href="https://github.com/jankin3/project-leetcode/blob/master/91-Decode-Ways-analysis.md" target="_blank" rel="noopener">https://github.com/jankin3/project-leetcode/blob/master/91-Decode-Ways-analysis.md</a></p></li><li><p>分词问题</p><p><a href="https://github.com/jankin3/project-leetcode/blob/master/139-wordbreak-analysis.md" target="_blank" rel="noopener">https://github.com/jankin3/project-leetcode/blob/master/139-wordbreak-analysis.md</a></p></li><li><p>最佳买卖股票时机含冷冻期 问题</p><p><a href="https://github.com/jankin3/project-leetcode/blob/master/309-best-time-to-buy-and-sell-stock-with-cooldown-analysis.md" target="_blank" rel="noopener">https://github.com/jankin3/project-leetcode/blob/master/309-best-time-to-buy-and-sell-stock-with-cooldown-analysis.md</a></p></li></ul><h2 id="它有什么？"><a href="#它有什么？" class="headerlink" title="它有什么？"></a>它有什么？</h2><h3 id="两个要素"><a href="#两个要素" class="headerlink" title="两个要素"></a>两个要素</h3><ul><li>状态转移方程</li><li>临界条件</li></ul><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><ul><li>重叠子问题和最优子结构</li></ul><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul><li><p>表格</p><ul><li>目的就是去不断推导，完成状态转移， 表格中的每一个cell都是一个小问题， 我们先解决规模为寻常的情况，然后根据这个结果逐步推导</li></ul></li></ul><h2 id="关联算法"><a href="#关联算法" class="headerlink" title="关联算法"></a>关联算法</h2><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>参考:<a href="https://github.com/azl397985856/leetcode/blob/master/thinkings/dynamic-programming.md" target="_blank" rel="noopener">https://github.com/azl397985856/leetcode/blob/master/thinkings/dynamic-programming.md</a></p><ul><li><p>对比</p><ul><li>递归，从问题的结果倒推，直到问题的规模缩小到寻常。</li><li>动态规划，就是从寻常入手， 逐步扩大规模到最优子结构</li></ul></li></ul><h3 id="贪婪算法"><a href="#贪婪算法" class="headerlink" title="贪婪算法"></a>贪婪算法</h3><ul><li>to do</li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
+    
+    <summary type="html">
+    
+      算法-动态规划
+    
+    </summary>
+    
+    
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="动态规划" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>thoughts-996</title>
