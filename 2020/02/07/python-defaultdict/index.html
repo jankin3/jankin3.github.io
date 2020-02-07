@@ -20,16 +20,16 @@
 	<link rel="preconnect" href="//9qpuwspm.api.lncld.net">
 	<link rel="preconnect" href="//gravatar.loli.net">
 
-	<title>shell-script | 2020, 稳定前行</title>
+	<title>python-defaultdict | 2020, 稳定前行</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 	<meta name="generator" content="hexo">
 	<meta name="author" content="Jankin">
-	<meta name="description" content>
+	<meta name="description" content="python defaultdict 使用">
 
 	
-	<meta name="keywords" content>
+	<meta name="keywords" content="python">
 	
 
 	
@@ -45,14 +45,14 @@
 
 	<meta property="og:site_name" content="2020, 稳定前行">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="shell-script | 2020, 稳定前行">
-	<meta property="og:description" content>
-	<meta property="og:url" content="http://yoursite.com/2019/12/12/shell-script/">
+	<meta property="og:title" content="python-defaultdict | 2020, 稳定前行">
+	<meta property="og:description" content="python defaultdict 使用">
+	<meta property="og:url" content="http://yoursite.com/2020/02/07/python-defaultdict/">
 
 	
-	<meta property="article:published_time" content="2019-12-12T19:12:00+08:00"> 
+	<meta property="article:published_time" content="2020-02-07T10:02:00+08:00"> 
 	<meta property="article:author" content="Jankin">
-	<meta property="article:published_first" content="2020, 稳定前行, /2019/12/12/shell-script/">
+	<meta property="article:published_first" content="2020, 稳定前行, /2020/02/07/python-defaultdict/">
 	
 
 	
@@ -132,85 +132,84 @@
     <div class="inner">
         <header class="post-full-header">
             <div class="post-full-meta">
-                <time class="post-full-meta-date" datetime="2019-12-12T11:10:38.000Z">
-                    2019-12-12
+                <time class="post-full-meta-date" datetime="2020-02-07T02:49:21.000Z">
+                    2020-02-7
                 </time>
                 
                 <span class="date-divider">/</span>
                 
                 
             </div>
-            <h1 class="post-full-title">shell-script</h1>
+            <h1 class="post-full-title">python-defaultdict</h1>
         </header>
-        <div class="post-full no-image">
+        <div class="post-full ">
+            
+            <figure class="post-full-image" style="background-image: url(https://images.unsplash.com/photo-1580844284222-115df5c5bb4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2249&q=80)">
+            </figure>
             
             <div class="post-full-content">
                 <article id="photoswipe" class="markdown-body">
-                    <h1 id="shell-脚本"><a href="#shell-脚本" class="headerlink" title="shell 脚本"></a>shell 脚本</h1><h2 id="作用：处理用户和系统的交互"><a href="#作用：处理用户和系统的交互" class="headerlink" title="作用：处理用户和系统的交互"></a>作用：处理用户和系统的交互</h2><h2 id="语法基础"><a href="#语法基础" class="headerlink" title="语法基础"></a>语法基础</h2><p>详细请看<a href="https://www.cnblogs.com/skywang12345/archive/2013/05/30/3106570.html#a1" target="_blank" rel="noopener">https://www.cnblogs.com/skywang12345/archive/2013/05/30/3106570.html#a1</a></p>
-<h2 id="相关拓展"><a href="#相关拓展" class="headerlink" title="相关拓展"></a>相关拓展</h2><a id="more"></a>
-<h3 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h3><p>原文:<a href="http://www.ruanyifeng.com/blog/2017/11/bash-set.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2017/11/bash-set.html</a></p>
-<ul>
-<li><p>问题：</p>
-<ul>
-<li>目前shell 遇到错误不会自动暂停，会继续向下执行，这个其他python之类程序有很大不同，很可能产生和预期不一样的结果</li>
-</ul>
-</li>
-<li><p>解决:set command用来定制环境</p>
-<ul>
-<li><p>-u 遇到不存在的变量报错(同-o nounset)</p>
-</li>
-<li><p>错误处理</p>
-<ul>
-<li><p>command || exit 1</p>
-</li>
-<li><p>-e:发生错误，就终止执行(同-o errexit)</p>
-</li>
-<li><p>特殊对于管道命令</p>
-<ul>
-<li>特殊性：Bash 会把最后一个子命令的返回值，作为整个命令的返回值</li>
-<li>set -o pipefail:个人理解是把管道内部命令抛出去然后外部-e 会捕获，所以对于管道内部其实还是会继续执行操作</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>-x 输出详细输入输出(同-o xtrace)</p>
-</li>
-<li><p>汇总:</p>
-<ul>
-<li>shell 内部：set -euxo pipefail（推荐）</li>
-<li>执行时：bash -euxo pipefail xxx.sh</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="ssh交互"><a href="#ssh交互" class="headerlink" title="ssh交互"></a>ssh交互</h3><ul>
-<li><p>简介:ssh 不单可以登录，可以直接执行相关命令ssh <a href="mailto:nick@xxx.xxx.xxx.xxx" target="_blank" rel="noopener">nick@xxx.xxx.xxx.xxx</a> “df -h”</p>
-</li>
-<li><p>shell  中需要与remote server 交互</p>
-<ul>
-<li><p>简单命令</p>
-<ul>
-<li>可以直接放在后面,使用引号, 例如ssh  $remote_host “mysqldump -uxxx-pxxx xxx”</li>
-<li>缺点：(不能传递变量)</li>
-</ul>
-</li>
-<li><p>复杂命令</p>
-<ul>
-<li>想要实现复杂的命令,可以写在外部脚本中</li>
-<li>eg:ssh <a href="mailto:nick@xxx.xxx.xxx.xxx" target="_blank" rel="noopener">nick@xxx.xxx.xxx.xxx</a> ‘bash -s’ &lt; test.sh var1 var2</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="相关操作符"><a href="#相关操作符" class="headerlink" title="相关操作符"></a>相关操作符</h3><ul>
-<li><a href="https://blog.csdn.net/x1269778817/article/details/46535729" target="_blank" rel="noopener">https://blog.csdn.net/x1269778817/article/details/46535729</a></li>
-</ul>
-<p><em>XMind: ZEN - Trial Version</em></p>
+                    <h1 id="defaultdict"><a href="#defaultdict" class="headerlink" title="defaultdict"></a>defaultdict</h1><h3 id="问题索引"><a href="#问题索引" class="headerlink" title="问题索引"></a>问题索引</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 统计字典的相同值的出现的所有的键(类似（键-值对组成的）序列转换为（键-列表组成的）字典)</span></span><br><span class="line">dict1 = &#123;<span class="number">1</span>:<span class="string">'a'</span>,<span class="number">2</span>:<span class="string">'b'</span>,<span class="number">3</span>:<span class="string">'a'</span>&#125;</span><br><span class="line"><span class="comment"># 方式1 原生字典</span></span><br><span class="line">summary_dict = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> dict1.items():</span><br><span class="line">    <span class="keyword">if</span> summary_dict.get(v, <span class="literal">False</span>):</span><br><span class="line">        summary_dict[v].append(k)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        summary_dict[v] = [k,]</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 方式二 setdefault()</span></span><br><span class="line"><span class="comment"># 字典setdefault() 函数和 get()方法 类似, 如果键不存在于字典中，将会添加键并将值设为默认值  </span></span><br><span class="line">summary_dict = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> dict1.items():</span><br><span class="line">    summary_dict.setdefault(v, []).append(k)</span><br></pre></td></tr></table></figure>
+<p>不足：每次对于k是否已经存在统计字典中药增加一个判断，方式的if-else, 方式二的setdefault(),简单的说就是一个初始化. 而<code>defaultdict</code>的出现刚好解决了这个问题.</p>
+<h3 id="defaultdict-是什么"><a href="#defaultdict-是什么" class="headerlink" title="defaultdict 是什么"></a>defaultdict 是什么</h3><p>官方文档:<a href="https://docs.python.org/zh-cn/3/library/collections.html#collections.defaultdict" target="_blank" rel="noopener">https://docs.python.org/zh-cn/3/library/collections.html#collections.defaultdict</a></p>
+<p>概述: <code>返回一个新的类似字典的对象。 defaultdict 是内置 dict 类的子类</code>。<br>它重载了一个方法并添加了一个可写的实例变量，其中keys的值，自行确定赋值，但是values的类型，是function_factory的类实例，而且具有默认值。比如default(int)则创建一个类似dictionary对象，里面任何的values都是int的实例，而且就算是一个不存在的key, d[key] 也有一个默认值，这个默认值是int()的默认值0</p>
+<h3 id="defaultdict-解决了什么问题？"><a href="#defaultdict-解决了什么问题？" class="headerlink" title="defaultdict 解决了什么问题？"></a>defaultdict 解决了什么问题？</h3><p>初始化问题</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方式三 defaultdict</span></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line">dict1 = &#123;<span class="number">1</span>:<span class="string">'a'</span>,<span class="number">2</span>:<span class="string">'b'</span>,<span class="number">3</span>:<span class="string">'a'</span>&#125;</span><br><span class="line">summary_dict = defaultdict(list)</span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> dict1.items():</span><br><span class="line">    summary_dict[v].append(k)</span><br><span class="line"><span class="comment">#官方解释 当每个键第一次遇见时，它还没有在字典里面，所以自动创建该条目，即调用 default_factory 方法，返回一个空的 list。 list.append() 操作添加值到这个新的列表里。当再次存取该键时，就正常操作，list.append() 添加另一个值到列表中。这个计数比它的等价方法 dict.setdefault() 要快速和简单：</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p> 使用 list 作为 default_factory，很轻松地将（键-值对组成的）序列转换为（键-列表组成的）字典，同上例</p>
+<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><ol>
+<li>关于collections</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">模块</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">namedtuple()</td>
+<td align="left">创建命名元组子类的工厂函数</td>
+</tr>
+<tr>
+<td align="left">deque</td>
+<td align="left">类似列表(list)的容器，实现了在两端快速添加(append)和弹出(pop)</td>
+</tr>
+<tr>
+<td align="left">ChainMap</td>
+<td align="left">类似字典(dict)的容器类，将多个映射集合到一个视图里面</td>
+</tr>
+<tr>
+<td align="left">Counter</td>
+<td align="left">字典的子类，提供了可哈希对象的计数功能</td>
+</tr>
+<tr>
+<td align="left">OrderedDict</td>
+<td align="left">字典的子类，保存了他们被添加的顺序</td>
+</tr>
+<tr>
+<td align="left">defaultdict</td>
+<td align="left">字典的子类，提供了一个工厂函数，为字典查询提供一个默认值</td>
+</tr>
+<tr>
+<td align="left">UserDict</td>
+<td align="left">封装了字典对象，简化了字典子类化</td>
+</tr>
+<tr>
+<td align="left">UserList</td>
+<td align="left">封装了列表对象，简化了列表子类化</td>
+</tr>
+<tr>
+<td align="left">UserString</td>
+<td align="left">封装了列表对象，简化了字符串子类化</td>
+</tr>
+</tbody></table>
 
                 </article>
                 <ul class="tags-postTags">
+                    
+                    <li>
+                        <a href="/tags/python/" rel="tag"># python</a>
+                    </li>
                     
                 </ul>
             </div>
@@ -220,14 +219,10 @@
     
     <nav id="gobottom" class="pagination">
         
-        <a class="prev-post" title="mysql-explain" href="/2019/12/19/mysql-explain/">
-            ← mysql-explain
-        </a>
-        
         <span class="prev-next-post">·</span>
         
-        <a class="next-post" title="mysql-lock" href="/2019/12/09/mysql-lock/">
-            mysql-lock →
+        <a class="next-post" title="algorithm--dynamic-programming" href="/2020/02/02/algorithm-dynamic-programming/">
+            algorithm--dynamic-programming →
         </a>
         
     </nav>
@@ -249,7 +244,7 @@
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#shell-脚本"><span class="toc-text">shell 脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#作用：处理用户和系统的交互"><span class="toc-text">作用：处理用户和系统的交互</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语法基础"><span class="toc-text">语法基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关拓展"><span class="toc-text">相关拓展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安全性"><span class="toc-text">安全性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ssh交互"><span class="toc-text">ssh交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相关操作符"><span class="toc-text">相关操作符</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#defaultdict"><span class="toc-text">defaultdict</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题索引"><span class="toc-text">问题索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#defaultdict-是什么"><span class="toc-text">defaultdict 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#defaultdict-解决了什么问题？"><span class="toc-text">defaultdict 解决了什么问题？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用实例"><span class="toc-text">使用实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拓展"><span class="toc-text">拓展</span></a></li></ol></li></ol>
     </div>
 </div>
 

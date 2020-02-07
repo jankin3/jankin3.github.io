@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/07/python-defaultdict/</loc>
+    
+    <lastmod>2020-02-07T10:10:28.031Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/02/02/algorithm-dynamic-programming/</loc>
     
     <lastmod>2020-02-01T16:19:14.423Z</lastmod>
