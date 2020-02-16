@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="https://www.w3.org/2005/Atom">
-  <title>2020, 稳定前行</title>
+  <title>Those who cannot remember the past are condemned to repeat it.</title>
   
-  <subtitle>忘记历史, 必将重蹈覆辙 --动态规划</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-07T10:10:28.031Z</updated>
+  <updated>2020-02-16T09:29:18.884Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>oauth</title>
+    <link href="http://yoursite.com/2020/02/16/oauth/"/>
+    <id>http://yoursite.com/2020/02/16/oauth/</id>
+    <published>2020-02-16T06:21:26.000Z</published>
+    <updated>2020-02-16T09:29:18.884Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://q4b6m25wx.bkt.clouddn.com/xmind/oauth.png" alt="avatar"></p><h1 id="oauth"><a href="#oauth" class="headerlink" title="oauth"></a>oauth</h1><h2 id="oauth是什么？"><a href="#oauth是什么？" class="headerlink" title="oauth是什么？"></a>oauth是什么？</h2><h3 id="一个开放标准，允许用户-无需提供将用户名和密码-让第三方应用访问该用户在某一网站上存储的私密的资源"><a href="#一个开放标准，允许用户-无需提供将用户名和密码-让第三方应用访问该用户在某一网站上存储的私密的资源" class="headerlink" title="一个开放标准，允许用户(无需提供将用户名和密码)让第三方应用访问该用户在某一网站上存储的私密的资源"></a>一个开放标准，允许用户(无需提供将用户名和密码)让第三方应用访问该用户在某一网站上存储的私密的资源</h3><h2 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h2><a id="more"></a><p>参考：<a href="http://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html</a></p><h3 id="提供一个token令牌"><a href="#提供一个token令牌" class="headerlink" title="提供一个token令牌"></a>提供一个token令牌</h3><h3 id="token"><a href="#token" class="headerlink" title="token"></a>token</h3><ul><li><p>特点：短期，可撤销，有范围</p></li><li><p>如何获取token</p><ul><li><p>方式</p><ul><li><p>授权码（authorization-code）</p><ul><li>特点：最常用最安全，适用于有后端的web项目</li><li>实现：前端返回code，后端使用code请求token</li></ul></li><li><p>隐藏式（implicit）</p><ul><li>实现：直接请求token</li></ul></li><li><p>密码式（password）</p><ul><li>风险很大，直接告诉账号密码</li></ul></li><li><p>客户端凭证（client credentials）</p><ul><li>适用于没有前端的命令行应用，即在命令行下请求令牌</li></ul></li></ul></li></ul></li><li><p>使用token</p><ul><li>一般在请求头添加”Authorization: Bearer ACCESS_TOKEN”</li></ul></li><li><p>更新token</p><ul><li>一般会一起返回一个refresh_token，用于刷新token</li></ul></li></ul><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>参考：google登录官方文档<br><a href="https://developers.google.com/identity/protocols/OAuth2" target="_blank" rel="noopener">https://developers.google.com/identity/protocols/OAuth2</a></p><h3 id="三方登录"><a href="#三方登录" class="headerlink" title="三方登录"></a>三方登录</h3><h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><h3 id="openId"><a href="#openId" class="headerlink" title="openId"></a>openId</h3><h3 id="openId-connect"><a href="#openId-connect" class="headerlink" title="openId connect"></a>openId connect</h3><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://q4b6m25wx.bkt.clouddn.com/xmind/oauth.png&quot; alt=&quot;avatar&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;oauth&quot;&gt;&lt;a href=&quot;#oauth&quot; class=&quot;headerlink&quot; title=&quot;oauth&quot;&gt;&lt;/a&gt;oauth&lt;/h1&gt;&lt;h2 id=&quot;oauth是什么？&quot;&gt;&lt;a href=&quot;#oauth是什么？&quot; class=&quot;headerlink&quot; title=&quot;oauth是什么？&quot;&gt;&lt;/a&gt;oauth是什么？&lt;/h2&gt;&lt;h3 id=&quot;一个开放标准，允许用户-无需提供将用户名和密码-让第三方应用访问该用户在某一网站上存储的私密的资源&quot;&gt;&lt;a href=&quot;#一个开放标准，允许用户-无需提供将用户名和密码-让第三方应用访问该用户在某一网站上存储的私密的资源&quot; class=&quot;headerlink&quot; title=&quot;一个开放标准，允许用户(无需提供将用户名和密码)让第三方应用访问该用户在某一网站上存储的私密的资源&quot;&gt;&lt;/a&gt;一个开放标准，允许用户(无需提供将用户名和密码)让第三方应用访问该用户在某一网站上存储的私密的资源&lt;/h3&gt;&lt;h2 id=&quot;原理：&quot;&gt;&lt;a href=&quot;#原理：&quot; class=&quot;headerlink&quot; title=&quot;原理：&quot;&gt;&lt;/a&gt;原理：&lt;/h2&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="协议" scheme="http://yoursite.com/tags/%E5%8D%8F%E8%AE%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>python-defaultdict</title>
@@ -130,7 +152,7 @@
     <link href="http://yoursite.com/2020/01/21/annual-year-2019/"/>
     <id>http://yoursite.com/2020/01/21/annual-year-2019/</id>
     <published>2020-01-21T08:58:06.000Z</published>
-    <updated>2020-02-10T09:27:30.648Z</updated>
+    <updated>2020-02-16T09:07:05.913Z</updated>
     
     <content type="html"><![CDATA[<h1 id="2019年总结"><a href="#2019年总结" class="headerlink" title="2019年总结"></a>2019年总结</h1><blockquote><p>适应和胜任工作要求，编程的习惯的养成，开始读书充电和总结知识体系，遇到一些问题并学会去解决  –jankin的2019年度总结</p></blockquote><a id="more"></a><h2 id="适应和胜任工作"><a href="#适应和胜任工作" class="headerlink" title="适应和胜任工作"></a>适应和胜任工作</h2><p><code>整体考虑</code>，<code>主动性</code>，<code>责任感</code>，<code>独当一面</code>，如果用词语概括今年工作的收获的话。进入工作一年半了，自己最大的感受就是如何去做好一份工作。 且不论coding能力的高低，也有很多东西值得体会和去学习。</p><h2 id="编程的习惯养成"><a href="#编程的习惯养成" class="headerlink" title="编程的习惯养成"></a>编程的习惯养成</h2><blockquote><p>你不必在技术上很在行，但你必须有能引导你变得在行的特质──机敏、有想法、善于观察、乐于主动参与解决问题。</p></blockquote><p><code>编程的理解</code>，今年对编程有了一些新的理解。编程就想是造房子，一个项目就是一个建造一个建筑。大到每个房屋之间怎么配合协调，小到这块装那块瓦怎么放置，都是工程师去设计并实现。当我们去做具体的需要的时候，尽可能的去考虑整体的设计以及兼顾细节的完美，才能编写出艺术品，而不是简单的代码机器的产物。</p><p><code>编程的能力</code>，从编程的能力来说，一些小的总结和一些有待改进</p><ul><li>总结</li></ul><ol><li>解决问题，善于利用google和stackoverflow去快速解决常见的问题</li><li>抓住问题，google和stackoverflow可以快速的找到解决方案,但并不应该只是按照这个上面的copy下来运行一下可以解决问题就完事了。每一个问题都是宝贵的财富，不要避开问题，多看文档多查资料多学习去解决问题，网络可以快速找到解决方案但是方案背后的原理需要去琢磨</li><li>整理归纳，基本功不够扎实，比如经常用到的时间模块，每次使用还是要去现场查资料，没有google开发进度为0。意识到这个问题之后今年开始写博客开始整理了，也算是一个不小的改善了，嘿嘿嘿。</li></ol><ul><li>有待改进：</li></ul><ol><li>多注重技术层次的思考，能够完成基本需求的同时应该去思考技术的本身，提升技术，毕竟技术是安家立命之本。</li></ol><h2 id="开始读书充电"><a href="#开始读书充电" class="headerlink" title="开始读书充电"></a>开始读书充电</h2><p>今年。读了《python核心编程》,《高性能mysql》,《从小工到专家》.没读完的《编程珠玑》《深入理解nginx》《鸟哥的私房菜》。买了很多技术书籍，看进去的不多。从收获上来说确实有所收获，但是也发现了一些问题。<br>问题:当需要用到一些书中东西的时候，脑袋不是特别的清晰。<br>问题原因: <code>缺少思考与整理</code>，读书不是读小说翻完了就OK了<br>新的认识:书籍是作者按照他的思路与思维模式去编写的知识载体，对于自己来说，我们拥有自己的知识网络，我们需要理解去归纳到自己的知识网络。</p><h2 id="遇到一些问题并解决"><a href="#遇到一些问题并解决" class="headerlink" title="遇到一些问题并解决"></a>遇到一些问题并解决</h2><p>遇到一个问题，<code>从日常需求来说其实都比较杂乱，经常做了之后没有足够的满足感和成就感。具体的实际影响就是比较累而且收获不大</code>。<br>深入思考了这个问题很久，我的解决方案</p><ol><li><code>心态</code>，作为一个刚进入工作的年轻人，应该去感激每一个机会去学习去积累</li><li><code>技术的思考</code>，当你做简单的事情的时候，有没有考虑你是否是站在巨人的肩膀上，才显得特别轻松。当你用bootstrap的时候有没有考虑过为什么这个框架这么受欢迎？他是怎么实现的？为什么laravel比TP好用？为什么选择mysql数据库？简单的东西需要去思考去研究。</li><li><code>业务的思考</code>，当新的需要提出的时候，应该是考虑此需求背后的具体的问题点是什么，从工程师的角度是否有更好的方式去解决，而不是只是想一个代码机器去执行PM的需求文档里面的流程。</li></ol><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总的来说，2019年是我的一个开启之年。开始进入工作状态，开始学会去编程，开始不断的充电，当然也开始遇到问题并学会去解决。2020，新的一年，加油!</p>]]></content>
     
@@ -424,27 +446,6 @@
     <summary type="html">
     
       &lt;h4 id=&quot;零宽断言&quot;&gt;&lt;a href=&quot;#零宽断言&quot; class=&quot;headerlink&quot; title=&quot;零宽断言&quot;&gt;&lt;/a&gt;零宽断言&lt;/h4&gt;&lt;p&gt;接下来的四个用于查找在某些内容(但并不包括这些内容)之前或之后的东西，也就是说它们像\b,^,$那样用于指定一个位置，这个位置应该满足一定的条件(即断言)，因此它们也被称为零宽断言。最好还是拿例子来说明吧：&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>git note</title>
-    <link href="http://yoursite.com/2019/11/17/git-note/"/>
-    <id>http://yoursite.com/2019/11/17/git-note/</id>
-    <published>2019-11-17T10:11:23.000Z</published>
-    <updated>2020-01-17T07:26:56.751Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="本地多个-remote-配置（同步推送到线上服务器）"><a href="#本地多个-remote-配置（同步推送到线上服务器）" class="headerlink" title="本地多个 remote 配置（同步推送到线上服务器）"></a>本地多个 remote 配置（同步推送到线上服务器）</h4><ol><li>远程 git库初始化，并配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git config receive.denyCurrentBranch updateInstead</span><br></pre></td></tr></table></figure></li><li>本地添加远程地址<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add productionServer ssh://ubuntu@xxx.xxx.xxx.xxx/usr/share/nginx/git_dir</span><br></pre></td></tr></table></figure><a id="more"></a><h4 id="Git-Config中receive-denyCurrentBranch做了什么"><a href="#Git-Config中receive-denyCurrentBranch做了什么" class="headerlink" title="Git Config中receive.denyCurrentBranch做了什么?"></a>Git Config中receive.denyCurrentBranch做了什么?</h4>这个config是决定 当你Push到一个非bare的远程库的正处于切换状态下分支时的行为。</li></ol><p>设置为true或refuse时，会拒绝你的push并且发出几行警告消息<br>设置为warn时，会接受你的push并且发出几行警告消息<br>设置为false或ignore时会接受你的push且不发出警告</p><p>后两种虽然接受了push,但并没有直接反映在工作目录(working tree)上，你需要输入git reset –hard, 或者切换到其他分支再切换回来，才能刷新文件</p><p>设置为updateInstead时，会接受push并直接更新工作目录,但如果工作目录相对HEAD指针有更新，则会拒绝push</p><h4 id="git-checkout"><a href="#git-checkout" class="headerlink" title="git checkout"></a>git checkout</h4><p><code>git checkout -- file</code>，没有–，就变成了“切换到另一个分支”的命令<br>命令git checkout – readme.txt意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：<br>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；<br>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。<br>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout – file。<br>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作</p><blockquote><p>总之，就是让这个文件回到最近一次git commit或git add时的状态</p></blockquote><p><code>git checkout --orphan &lt;new_branch&gt;</code><br>假如你的某个分支上，积累了无数次的提交，你也懒得去打理，打印出的log也让你无力吐槽，那么这个命令将是你的神器，它会基于当前所在分支新建一个赤裸裸的分支，没有任何的提交历史，但是当前分支的内容一一俱全。新建的分支，严格意义上说，还不是一个分支，因为HEAD指向的引用中没有commit值，只有在进行一次提交后，它才算得上真正的分支。</p><p><code>git checkout &lt;name&gt; 切换分支：</code></p><h3 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h3><p>写法：git reset [–hard|soft|mixed|merge|keep] [<commit>或HEAD]<br>功能：命令既可以回退版本，也可以把暂存区的修改回退到工作区<br>原理：将当前的分支重设（reset）到指定的<commit>或者HEAD（默认，如果不显示指定commit，默认是HEAD，即<br>最新的一次提交）<br>–hard：重设（reset） index和working directory，自从<commit>以来在working directory中的任何改变都﻿被丢弃，并把HEAD指向<commit>。<br>–soft：index和working directory中的内容不作任何改变，仅仅把HEAD指向<commit>。这个模式的效果是，执行完毕后，自从<commit>以来的所有改变都会显示在git status的”Changes to be committed”中。<br>–mixed:仅reset index，但是不reset working directory。</p><p>###git  checkout 与git reset区别<br>git checkout是把<code>工作区文件</code>回到最近一次git commit<code>或</code>git add时的状态<br>git reset 是使用<code>仓库区更新工作区和暂存区</code></p><h3 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h3><p>??? 储存在当前分支还是针对所有分支都可见<br>切换分支时必须commit your changes or stash them before you switch branches.<br>保存当前工作进度，会把暂存区和工作区的改动保存起来。执行完这个命令后，在运行git status命令，就会发现当前是一个干净的工作区，没有任何改动。使用git stash save ‘message…’可以添加一些注释</p><p>git stash list<br>显示保存进度的列表。也就意味着，git stash命令可以多次执行。</p><p><code>git stash pop</code> [–index] [stash_id]<br>git stash pop 恢复最新的进度到工作区。git默认会把工作区和暂存区的改动都恢复到工作区。<br><code>git stash pop --index</code> 恢复最新的进度到工作区和暂存区。（尝试将原来暂存区的改动还恢复到暂存区）<br>git stash pop stash@{1}恢复指定的进度到工作区。stash_id是通过git stash list命令得到的<br>通过git stash pop命令恢复进度后，会删除当前进度。<br>git stash apply [–index] [stash_id]<br>除了不删除恢复的进度之外，其余和git stash pop 命令一样。</p><p>git stash drop [stash_id]<br>删除一个存储的进度。如果不指定stash_id，则默认删除最新的存储进度。</p><p>git stash clear<br>删除所有存储的进度。</p><h4 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h4><p>git rebase master 待实践</p><h4 id="git-cherry-pick"><a href="#git-cherry-pick" class="headerlink" title="git cherry-pick"></a>git cherry-pick</h4><p>简单用法：<br>git cherry-pick <commit id><br>注意：当执行完 cherry-pick 以后，将会生成一个新的提交；这个新的提交的哈希值和原来的不同，但标识名一样；</p><h4 id="git-log-and-git-reflog"><a href="#git-log-and-git-reflog" class="headerlink" title="git log and git reflog"></a>git log and git reflog</h4><p><a href="http://wjp2013.github.io/tool/git-reflog-git-log-git-cherry-pick/" target="_blank" rel="noopener">http://wjp2013.github.io/tool/git-reflog-git-log-git-cherry-pick/</a></p><h4 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h4><p>删除远端分支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin -d login-test</span><br></pre></td></tr></table></figure><p>先查看远程分支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -ｒ</span><br></pre></td></tr></table></figure><p>查看所有分支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure><h4 id="git-pull与-rebase"><a href="#git-pull与-rebase" class="headerlink" title="git pull与 rebase"></a>git pull与 rebase</h4><p>今天<br>git pull origin master:master –rebase<br>发生了错误<br>! [rejected] (non-fast-forward)</p><p>一般non-fast-forward 这个错误是发生在push的时候和远程节点不对应，但是今天Git pull 也发生了问题，但是奇怪的是<br>git pull origin master –rebase<br>却可以正常运行。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;本地多个-remote-配置（同步推送到线上服务器）&quot;&gt;&lt;a href=&quot;#本地多个-remote-配置（同步推送到线上服务器）&quot; class=&quot;headerlink&quot; title=&quot;本地多个 remote 配置（同步推送到线上服务器）&quot;&gt;&lt;/a&gt;本地多个 remote 配置（同步推送到线上服务器）&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;远程 git库初始化，并配置&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config receive.denyCurrentBranch updateInstead&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;本地添加远程地址&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git remote add productionServer ssh://ubuntu@xxx.xxx.xxx.xxx/usr/share/nginx/git_dir&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
