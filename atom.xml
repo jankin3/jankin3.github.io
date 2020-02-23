@@ -257,6 +257,29 @@
   </entry>
   
   <entry>
+    <title>nginx</title>
+    <link href="http://yoursite.com/2020/01/15/npm/"/>
+    <id>http://yoursite.com/2020/01/15/npm/</id>
+    <published>2020-01-15T14:57:48.000Z</published>
+    <updated>2020-02-23T08:39:56.209Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><h3 id="全称-Node-Package-Manager，即node包管理器，维基https-zh-wikipedia-org-wiki-Npm"><a href="#全称-Node-Package-Manager，即node包管理器，维基https-zh-wikipedia-org-wiki-Npm" class="headerlink" title="全称 Node Package Manager，即node包管理器，维基https://zh.wikipedia.org/wiki/Npm"></a>全称 Node Package Manager，即node包管理器，维基<a href="https://zh.wikipedia.org/wiki/Npm" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/Npm</a></h3><h2 id="配置-：package-json与lockfile-锁文件"><a href="#配置-：package-json与lockfile-锁文件" class="headerlink" title="配置 ：package.json与lockfile(锁文件)"></a>配置 ：<code>package.json</code>与lockfile(锁文件)</h2><a id="more"></a><h3 id="目的，生成相同的-node-modules"><a href="#目的，生成相同的-node-modules" class="headerlink" title="目的，生成相同的 node_modules"></a>目的，<code>生成相同的 node_modules</code></h3><h3 id="为什么需要lockfile"><a href="#为什么需要lockfile" class="headerlink" title="为什么需要lockfile?"></a>为什么需要lockfile?</h3><ul><li>达成目的，存在两个主要问题，1.npm 不同版本的安装算法不一致 2.依赖包和依赖包的依赖的更新</li></ul><h3 id="package-json与lockfile-锁文件-是什么？"><a href="#package-json与lockfile-锁文件-是什么？" class="headerlink" title="package.json与lockfile(锁文件)是什么？"></a><code>package.json</code>与lockfile(锁文件)是什么？</h3><ul><li>package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息</li><li>lockfile, 锁文件，一般包括 package-lock.json 或 npm-shrinkwrap.json，以记录实际安装的各个package的具体来源和版本号</li></ul><h3 id="配合使用"><a href="#配合使用" class="headerlink" title="配合使用"></a><code>配合使用</code></h3><ul><li>如果没有lockfile, npm i会生成一个</li><li>两者兼容，根据localfile 下载</li><li>两者不兼容，会根据package.json下载，并更新lockfile</li></ul><h3 id="参考，https-juejin-im-post-5d40f9a4e51d45620821ce30，https-www-zhihu-com-question-62331583"><a href="#参考，https-juejin-im-post-5d40f9a4e51d45620821ce30，https-www-zhihu-com-question-62331583" class="headerlink" title="参考，https://juejin.im/post/5d40f9a4e51d45620821ce30，https://www.zhihu.com/question/62331583"></a>参考，<a href="https://juejin.im/post/5d40f9a4e51d45620821ce30，https://www.zhihu.com/question/62331583" target="_blank" rel="noopener">https://juejin.im/post/5d40f9a4e51d45620821ce30，https://www.zhihu.com/question/62331583</a></h3><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="npm-install"><a href="#npm-install" class="headerlink" title="npm install"></a>npm install</h3><ul><li>整体安装，不加后缀直接安装，如果node_modules存在，就不再重新安装了，即使有新，也是如此, -f 强制重新安装</li><li>单独包安装，npm install <package name>  安装模块的特定版本 use @</li></ul><h3 id="npm-ci"><a href="#npm-ci" class="headerlink" title="npm ci"></a>npm ci</h3><ul><li>特点，整体安装，适合安装干净依赖的情况，快速，更严格，依赖于完整的配置，不会修改文件</li><li>原理，根据 package-lock.json 去安装确定的依赖，package.json 只是用来验证是不是有不匹配的版本，若有则报错</li></ul><h2 id="常用功能与命令"><a href="#常用功能与命令" class="headerlink" title="常用功能与命令"></a>常用功能与命令</h2><h3 id="查看包版本npm-list"><a href="#查看包版本npm-list" class="headerlink" title="查看包版本npm list"></a>查看包版本npm list</h3><ul><li>-g 全局，默认当前项目下的所有模块以及依赖</li><li>npm list packagename 查看单独模块</li></ul><h3 id="切换镜像"><a href="#切换镜像" class="headerlink" title="切换镜像"></a>切换镜像</h3><ul><li>临时使用，npm –registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> install express</li><li>永久使用，npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a>(验证npm config get registry)</li><li>通过cnpm，npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li><li>问题，使用cnpm install 之后的东西不受lockfile 控制，有点坑</li></ul><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
+    
+    <summary type="html">
+    
+      nginx 初步了解
+    
+    </summary>
+    
+    
+    
+      <category term="npm" scheme="http://yoursite.com/tags/npm/"/>
+    
+      <category term="package.json&amp;&amp;lockfile" scheme="http://yoursite.com/tags/package-json-lockfile/"/>
+    
+  </entry>
+  
+  <entry>
     <title>http</title>
     <link href="http://yoursite.com/2020/01/13/http/"/>
     <id>http://yoursite.com/2020/01/13/http/</id>
@@ -275,26 +298,6 @@
     
     
       <category term="网络协议" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm</title>
-    <link href="http://yoursite.com/2020/01/09/npm/"/>
-    <id>http://yoursite.com/2020/01/09/npm/</id>
-    <published>2020-01-09T00:37:06.000Z</published>
-    <updated>2020-01-17T07:27:40.433Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><h3 id="全称-Node-Package-Manager，即node包管理器"><a href="#全称-Node-Package-Manager，即node包管理器" class="headerlink" title="全称 Node Package Manager，即node包管理器"></a>全称 Node Package Manager，即node包管理器</h3><p><a href="https://zh.wikipedia.org/wiki/Npm" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/Npm</a></p><h2 id="常用功能与命令"><a href="#常用功能与命令" class="headerlink" title="常用功能与命令"></a>常用功能与命令</h2><a id="more"></a><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul><li><p>npm install</p><ul><li><p>不加后缀直接安装，如果node_modules存在，就不再重新安装了，即使有新，也是如此, -f 强制重新安装</p></li><li><p>package.json与package-lock.json</p><p>参见：<a href="https://juejin.im/post/5d40f9a4e51d45620821ce30" target="_blank" rel="noopener">https://juejin.im/post/5d40f9a4e51d45620821ce30</a></p><ul><li><p>是什么？</p><ul><li>配置文件,锁定安装时的包的版本号</li></ul></li><li><p>配合使用</p><ul><li>如果没有lockfile, npm i会生成一个</li><li>两者兼容，根据localfile 下载</li><li>两者不兼容，会根据package.json下载，并更新lockfile</li></ul></li></ul></li><li><p>npm install <package name>  安装模块的特定版本 use @</p></li></ul></li><li><p>npm ci</p><ul><li>适合安装干净依赖的情况</li><li>快，更严格</li><li>必须有lockfile</li><li>不会修改文件</li></ul></li><li><p>install &amp;&amp; ci</p><p>npm install 读取 package.json 创建依赖项列表，并使用 package-lock.json 来通知要安装这些依赖项的哪个版本。如果某个依赖项在 package.json 中，但是不在 package-lock.json 中，运行 npm install 会将这个依赖项的确定版本更新到 package-lock.json 中。<br>npm ci 是根据 package-lock.json 去安装确定的依赖，package.json 只是用来验证是不是有不匹配的版本，假设 package-lock.json 中存在一个确定版本的依赖 A，如果 package.json 中不存在依赖 A 或者依赖 A 版本和 lock 中不兼容，npm ci 就会报错。</p></li></ul><h3 id="查看包版本"><a href="#查看包版本" class="headerlink" title="查看包版本"></a>查看包版本</h3><ul><li><p>npm list</p><ul><li>默认当前项目下的所有模块以及依赖</li><li>-g 全局</li><li>packagename 查看单独模块</li></ul></li></ul><h3 id="npm-脚本"><a href="#npm-脚本" class="headerlink" title="npm 脚本"></a>npm 脚本</h3><p><em>XMind: ZEN - Trial Version</em></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;npm&quot;&gt;&lt;a href=&quot;#npm&quot; class=&quot;headerlink&quot; title=&quot;npm&quot;&gt;&lt;/a&gt;npm&lt;/h1&gt;&lt;h2 id=&quot;是什么？&quot;&gt;&lt;a href=&quot;#是什么？&quot; class=&quot;headerlink&quot; title=&quot;是什么？&quot;&gt;&lt;/a&gt;是什么？&lt;/h2&gt;&lt;h3 id=&quot;全称-Node-Package-Manager，即node包管理器&quot;&gt;&lt;a href=&quot;#全称-Node-Package-Manager，即node包管理器&quot; class=&quot;headerlink&quot; title=&quot;全称 Node Package Manager，即node包管理器&quot;&gt;&lt;/a&gt;全称 Node Package Manager，即node包管理器&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/Npm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://zh.wikipedia.org/wiki/Npm&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;常用功能与命令&quot;&gt;&lt;a href=&quot;#常用功能与命令&quot; class=&quot;headerlink&quot; title=&quot;常用功能与命令&quot;&gt;&lt;/a&gt;常用功能与命令&lt;/h2&gt;
-    
-    </summary>
-    
-    
     
   </entry>
   

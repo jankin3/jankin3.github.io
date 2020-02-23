@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/01/15/npm/</loc>
+    
+    <lastmod>2020-02-23T08:39:56.209Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/02/16/docker-summary/</loc>
     
     <lastmod>2020-02-16T10:53:42.896Z</lastmod>
@@ -110,13 +117,6 @@
     <loc>http://yoursite.com/2019/12/01/python-datetime/</loc>
     
     <lastmod>2020-01-17T07:27:42.591Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/01/09/npm/</loc>
-    
-    <lastmod>2020-01-17T07:27:40.433Z</lastmod>
     
   </url>
   
